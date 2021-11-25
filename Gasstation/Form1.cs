@@ -44,7 +44,8 @@ namespace Gasstation
             cmd.Parameters.AddWithValue("name", textBox1.Text);
             cmd.Parameters.AddWithValue("password", textBox2.Text);
             cmd.Parameters.AddWithValue("email", textBox3.Text);
-            MessageBox.Show(cmd.ExecuteNonQuery().ToString());
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Вы зарегистрировались!");
         }
     }
 }
