@@ -61,7 +61,6 @@ namespace Gasstation
                     this.Hide();
                     Form2 form = new Form2();
                     form.Show();
-
                 }
             }
         }

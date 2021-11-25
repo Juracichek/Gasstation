@@ -99,7 +99,7 @@
             this.butReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butReg.Location = new System.Drawing.Point(46, 339);
             this.butReg.Name = "butReg";
-            this.butReg.Size = new System.Drawing.Size(163, 42);
+            this.butReg.Size = new System.Drawing.Size(163, 58);
             this.butReg.TabIndex = 6;
             this.butReg.Text = "Registration";
             this.butReg.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             // butClose
             // 
             this.butClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.butClose.Location = new System.Drawing.Point(233, 339);
+            this.butClose.Location = new System.Drawing.Point(423, 467);
             this.butClose.Name = "butClose";
             this.butClose.Size = new System.Drawing.Size(111, 42);
             this.butClose.TabIndex = 7;
