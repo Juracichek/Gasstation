@@ -34,6 +34,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.butReg = new System.Windows.Forms.Button();
+            this.butClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name
@@ -81,6 +83,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(138, 35);
             this.textBox2.TabIndex = 4;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // textBox3
             // 
@@ -90,11 +93,33 @@
             this.textBox3.Size = new System.Drawing.Size(138, 35);
             this.textBox3.TabIndex = 5;
             // 
+            // butReg
+            // 
+            this.butReg.Location = new System.Drawing.Point(60, 405);
+            this.butReg.Name = "butReg";
+            this.butReg.Size = new System.Drawing.Size(111, 37);
+            this.butReg.TabIndex = 6;
+            this.butReg.Text = "Registration";
+            this.butReg.UseVisualStyleBackColor = true;
+            this.butReg.Click += new System.EventHandler(this.butReg_Click);
+            // 
+            // butClose
+            // 
+            this.butClose.Location = new System.Drawing.Point(60, 473);
+            this.butClose.Name = "butClose";
+            this.butClose.Size = new System.Drawing.Size(111, 34);
+            this.butClose.TabIndex = 7;
+            this.butClose.Text = "Close";
+            this.butClose.UseVisualStyleBackColor = true;
+            this.butClose.Click += new System.EventHandler(this.butClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 544);
+            this.Controls.Add(this.butClose);
+            this.Controls.Add(this.butReg);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -103,6 +128,7 @@
             this.Controls.Add(this.name);
             this.Name = "Form1";
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +142,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button butReg;
+        private System.Windows.Forms.Button butClose;
     }
 }
 
