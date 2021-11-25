@@ -44,8 +44,26 @@ namespace Gasstation
             cmd.Parameters.AddWithValue("name", textBox1.Text);
             cmd.Parameters.AddWithValue("password", textBox2.Text);
             cmd.Parameters.AddWithValue("email", textBox3.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Вы зарегистрировались!");
+            //cmd.ExecuteNonQuery();
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = cmd;
+            adapter.Fill(table);
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+            {
+                MessageBox.Show("Пожалуйста, заполните все поля", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (table.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Вы зарегистрировались!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Form2 form = new Form2();
+                    form.Show();
+
+                }
+            }
         }
     }
 }
