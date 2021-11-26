@@ -11,33 +11,27 @@ using System.Windows.Forms;
 
 namespace Gasstation
 {
-    public partial class Form2 : Form
+    public partial class Authorization : Form
     {
        SqlFunction sf = new SqlFunction();
 
-        public Form2()
+        public Authorization()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // Кнопка "Вход" - войти в систему
+        private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "" || textBox2.Text == "")
+            if (textBoxName.Text == "" || textBoxPassword.Text == "")
             {
-                MessageBox.Show("Пожалуйста, заполните все поля", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Пожалуйста, заполните все поля", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                if (sf.LogUsers(textBox1.Text, textBox2.Text))
+                if (sf.LogUsers(textBoxName.Text, textBoxPassword.Text))
                 {
-                    MessageBox.Show("Вы авторизованы", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Авторизация прошла успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Form3 form3 = new Form3();
                     form3.Show();
@@ -50,11 +44,12 @@ namespace Gasstation
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        // Кнопка "Регистрация" - перейти на форму Регистрации (Form1)        
+        private void buttonRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
+            Registration reg = new Registration();
+            reg.Show();
         }
     }
 }

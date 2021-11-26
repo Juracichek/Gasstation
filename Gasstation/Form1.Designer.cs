@@ -1,6 +1,6 @@
 ﻿namespace Gasstation
 {
-    partial class Form1
+    partial class Registration
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,134 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.name = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.butReg = new System.Windows.Forms.Button();
-            this.butClose = new System.Windows.Forms.Button();
+            this.labelNameReg = new System.Windows.Forms.Label();
+            this.labelPasswordReg = new System.Windows.Forms.Label();
+            this.labelEmailReg = new System.Windows.Forms.Label();
+            this.textBoxNameReg = new System.Windows.Forms.TextBox();
+            this.textBoxPasswordReg = new System.Windows.Forms.TextBox();
+            this.textBoxEmailReg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRegistration = new System.Windows.Forms.Button();
+            this.buttonSignIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // name
+            // labelNameReg
             // 
-            this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.name.Location = new System.Drawing.Point(72, 30);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(94, 29);
-            this.name.TabIndex = 0;
-            this.name.Text = "Name*:";
+            this.labelNameReg.AutoSize = true;
+            this.labelNameReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameReg.Location = new System.Drawing.Point(30, 27);
+            this.labelNameReg.Name = "labelNameReg";
+            this.labelNameReg.Size = new System.Drawing.Size(145, 29);
+            this.labelNameReg.TabIndex = 0;
+            this.labelNameReg.Text = "Ваше имя*:";
             // 
-            // password
+            // labelPasswordReg
             // 
-            this.password.AutoSize = true;
-            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.password.Location = new System.Drawing.Point(30, 97);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(136, 29);
-            this.password.TabIndex = 1;
-            this.password.Text = "Password*:";
+            this.labelPasswordReg.AutoSize = true;
+            this.labelPasswordReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPasswordReg.Location = new System.Drawing.Point(60, 91);
+            this.labelPasswordReg.Name = "labelPasswordReg";
+            this.labelPasswordReg.Size = new System.Drawing.Size(115, 29);
+            this.labelPasswordReg.TabIndex = 1;
+            this.labelPasswordReg.Text = "Пароль*:";
             // 
-            // email
+            // labelEmailReg
             // 
-            this.email.AutoSize = true;
-            this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.email.Location = new System.Drawing.Point(76, 155);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(90, 29);
-            this.email.TabIndex = 2;
-            this.email.Text = "Email*:";
+            this.labelEmailReg.AutoSize = true;
+            this.labelEmailReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEmailReg.Location = new System.Drawing.Point(85, 155);
+            this.labelEmailReg.Name = "labelEmailReg";
+            this.labelEmailReg.Size = new System.Drawing.Size(90, 29);
+            this.labelEmailReg.TabIndex = 2;
+            this.labelEmailReg.Text = "Email*:";
             // 
-            // textBox1
+            // textBoxNameReg
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(186, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 35);
-            this.textBox1.TabIndex = 3;
+            this.textBoxNameReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxNameReg.Location = new System.Drawing.Point(186, 24);
+            this.textBoxNameReg.Name = "textBoxNameReg";
+            this.textBoxNameReg.Size = new System.Drawing.Size(348, 35);
+            this.textBoxNameReg.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxPasswordReg
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(186, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(348, 35);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.textBoxPasswordReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPasswordReg.Location = new System.Drawing.Point(186, 91);
+            this.textBoxPasswordReg.Name = "textBoxPasswordReg";
+            this.textBoxPasswordReg.Size = new System.Drawing.Size(348, 35);
+            this.textBoxPasswordReg.TabIndex = 4;
+            this.textBoxPasswordReg.UseSystemPasswordChar = true;
             // 
-            // textBox3
+            // textBoxEmailReg
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(186, 152);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(348, 35);
-            this.textBox3.TabIndex = 5;
-            // 
-            // butReg
-            // 
-            this.butReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.butReg.Location = new System.Drawing.Point(46, 339);
-            this.butReg.Name = "butReg";
-            this.butReg.Size = new System.Drawing.Size(163, 58);
-            this.butReg.TabIndex = 6;
-            this.butReg.Text = "Registration";
-            this.butReg.UseVisualStyleBackColor = true;
-            this.butReg.Click += new System.EventHandler(this.butReg_Click);
-            // 
-            // butClose
-            // 
-            this.butClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.butClose.Location = new System.Drawing.Point(423, 467);
-            this.butClose.Name = "butClose";
-            this.butClose.Size = new System.Drawing.Size(111, 42);
-            this.butClose.TabIndex = 7;
-            this.butClose.Text = "Close";
-            this.butClose.UseVisualStyleBackColor = true;
-            this.butClose.Click += new System.EventHandler(this.butClose_Click);
+            this.textBoxEmailReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEmailReg.Location = new System.Drawing.Point(186, 152);
+            this.textBoxEmailReg.Name = "textBoxEmailReg";
+            this.textBoxEmailReg.Size = new System.Drawing.Size(348, 35);
+            this.textBoxEmailReg.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(22, 226);
+            this.label1.Location = new System.Drawing.Point(147, 261);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 29);
+            this.label1.Size = new System.Drawing.Size(260, 29);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Required fields*";
+            this.label1.Text = "Обязательные поля*";
             // 
-            // button1
+            // buttonRegistration
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(228, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 58);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Sign in";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegistration.Location = new System.Drawing.Point(106, 366);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(176, 58);
+            this.buttonRegistration.TabIndex = 10;
+            this.buttonRegistration.Text = "Регистрация";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
-            // Form1
+            // buttonSignIn
+            // 
+            this.buttonSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSignIn.Location = new System.Drawing.Point(288, 366);
+            this.buttonSignIn.Name = "buttonSignIn";
+            this.buttonSignIn.Size = new System.Drawing.Size(176, 58);
+            this.buttonSignIn.TabIndex = 11;
+            this.buttonSignIn.Text = "Вход";
+            this.buttonSignIn.UseVisualStyleBackColor = true;
+            this.buttonSignIn.Click += new System.EventHandler(this.buttonSignIn_Click);
+            // 
+            // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 544);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSignIn);
+            this.Controls.Add(this.buttonRegistration);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.butClose);
-            this.Controls.Add(this.butReg);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.email);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.name);
-            this.Name = "Form1";
-            this.Text = "Registration";
+            this.Controls.Add(this.textBoxEmailReg);
+            this.Controls.Add(this.textBoxPasswordReg);
+            this.Controls.Add(this.textBoxNameReg);
+            this.Controls.Add(this.labelEmailReg);
+            this.Controls.Add(this.labelPasswordReg);
+            this.Controls.Add(this.labelNameReg);
+            this.Name = "Registration";
+            this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,16 +151,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Label password;
-        private System.Windows.Forms.Label email;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button butReg;
-        private System.Windows.Forms.Button butClose;
+        private System.Windows.Forms.Label labelNameReg;
+        private System.Windows.Forms.Label labelPasswordReg;
+        private System.Windows.Forms.Label labelEmailReg;
+        private System.Windows.Forms.TextBox textBoxNameReg;
+        private System.Windows.Forms.TextBox textBoxPasswordReg;
+        private System.Windows.Forms.TextBox textBoxEmailReg;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.Button buttonSignIn;
     }
 }
 

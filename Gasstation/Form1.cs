@@ -12,18 +12,14 @@ using System.Configuration;
 
 namespace Gasstation
 {
-    public partial class Form1 : Form
+    public partial class Registration : Form
     {
+        // Создание экземпляра класса SqlFunction
         SqlFunction sf = new SqlFunction();
        
-        public Form1()
+        public Registration()
         {
             InitializeComponent();
-        }
-
-        private void butClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,29 +27,35 @@ namespace Gasstation
             
         }
 
-        private void butReg_Click(object sender, EventArgs e)
+        // Кнопка "Вход" - переход на форму Авторизации
+        private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+            this.Hide();
+            Authorization a = new Authorization();
+            a.Show();
+        }
+
+        // Кнопка "Регистрация" - чтобы зарегать пользователя
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            if (textBoxNameReg.Text == "" || textBoxPasswordReg.Text == "" || textBoxEmailReg.Text == "")
             {
                 MessageBox.Show("Пожалуйста, заполните все поля", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                if(sf.RegUsers(textBox1.Text, textBox2.Text, textBox3.Text))
+                if (sf.RegUsers(textBoxNameReg.Text, textBoxPasswordReg.Text, textBoxEmailReg.Text))
                 {
-                    MessageBox.Show("Вы зарегистрировались!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Регистрация прошла успешно!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Form2 form2 = new Form2();
-                    form2.Show();
+                    Authorization at = new Authorization();
+                    at.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Проверьте правильность написания Вашего имени или Пароля или зарегистрируйтесь!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 form2 = new Form2();
-            form2.Show();
         }
     }
 }
