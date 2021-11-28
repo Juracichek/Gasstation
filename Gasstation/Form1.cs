@@ -38,7 +38,7 @@ namespace Gasstation
         // Кнопка "Регистрация" - чтобы зарегать пользователя
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
-            if (textBoxNameReg.Text == "" || textBoxPasswordReg.Text == "" || textBoxEmailReg.Text == "")
+            if (textBoxNameReg.Text == "" || textBoxPasswordReg.Text == "" || textBoxEmailReg.Text == "" || textBoxTelReg.Text == "")
             {
                 MessageBox.Show("Пожалуйста, заполните все поля", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -64,6 +64,7 @@ namespace Gasstation
             textBoxNameReg.Clear();
             textBoxPasswordReg.Clear();
             textBoxEmailReg.Clear();
+            textBoxTelReg.Clear();
         }
     }
 }

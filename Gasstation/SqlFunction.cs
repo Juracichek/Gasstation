@@ -15,11 +15,11 @@ namespace Gasstation
 
 
         // Регистрация пользователя
-        public bool RegUsers(string name, string password, string email, string phone)
+        public bool RegUsers(string login, string password, string email, string phone)
         {
             bool flag = false;
-            MySqlCommand cmd = new MySqlCommand($"INSERT INTO users (name, password, email, phone) VALUES (@name, @password, @email, @phone)", conn);
-            cmd.Parameters.AddWithValue("@name", name);
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO users (login, password, email, phone) VALUES (@login, @password, @email, @phone)", conn);
+            cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@phone", phone);
@@ -33,11 +33,11 @@ namespace Gasstation
         }
 
         // Авторизация пользователя
-        public bool LogUsers(string name, string password)
+        public bool LogUsers(string login, string password)
         {
             bool flag = false;
-            MySqlCommand cmd = new MySqlCommand($"SELECT name FROM users WHERE name = @name AND password = @password", conn);
-            cmd.Parameters.AddWithValue("@name", name);
+            MySqlCommand cmd = new MySqlCommand($"SELECT login FROM users WHERE login = @login AND password = @password", conn);
+            cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@password", password);
             conn.Open();
             MySqlDataReader srd = cmd.ExecuteReader();

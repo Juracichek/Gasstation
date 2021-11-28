@@ -33,7 +33,7 @@ namespace Gasstation
                 {
                     MessageBox.Show("Авторизация прошла успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Interface i = new Interface();
+                    Simulation i = new Simulation();
                     i.Show();
                 }
                 else
