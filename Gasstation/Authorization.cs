@@ -52,7 +52,7 @@ namespace Gasstation
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Registration reg = new Registration();
+            Reg reg = new Reg();
             reg.Show();
         }
 

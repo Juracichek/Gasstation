@@ -12,19 +12,19 @@ using System.Configuration;
 
 namespace Gasstation
 {
-    public partial class Registration : Form
+    public partial class Reg : Form
     {
         // Создание экземпляра класса SqlFunction
         SqlFunction sf = new SqlFunction();
-       
-        public Registration()
+
+        public Reg()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         // Кнопка "Вход" - переход на форму Авторизации

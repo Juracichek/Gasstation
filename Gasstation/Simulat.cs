@@ -31,8 +31,8 @@ namespace Gasstation
         public void Registration()
         {
             while(Working)
-            {
-                string login = logins[random.Next(0, logins.Length)];
+            { 
+                string login = logins[random.Next(0, logins.Length)] + random.Next(10000, 99999);
                 string password = passwords[random.Next(0, passwords.Length)];
                 string phone = phons[random.Next(0, phons.Length)];
                 string email = emails[random.Next(0, emails.Length)];
