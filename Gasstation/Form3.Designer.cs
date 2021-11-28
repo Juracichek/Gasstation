@@ -1,6 +1,6 @@
 ﻿namespace Gasstation
 {
-    partial class Form3
+    partial class Interface
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form3
+            // Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 1050);
-            this.Name = "Form3";
-            this.Text = "Interface";
+            this.Name = "Interface";
+            this.Text = "Интерфейс";
             this.ResumeLayout(false);
 
         }

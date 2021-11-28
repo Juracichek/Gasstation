@@ -35,13 +35,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSignIn = new System.Windows.Forms.Button();
             this.buttonRegistration = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName.Location = new System.Drawing.Point(28, 43);
+            this.labelName.Location = new System.Drawing.Point(28, 137);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(145, 29);
             this.labelName.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPassword.Location = new System.Drawing.Point(58, 104);
+            this.labelPassword.Location = new System.Drawing.Point(58, 198);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(115, 29);
             this.labelPassword.TabIndex = 1;
@@ -60,35 +61,35 @@
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxName.Location = new System.Drawing.Point(188, 40);
+            this.textBoxName.Location = new System.Drawing.Point(188, 131);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(378, 35);
+            this.textBoxName.Size = new System.Drawing.Size(343, 35);
             this.textBoxName.TabIndex = 2;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassword.Location = new System.Drawing.Point(188, 104);
+            this.textBoxPassword.Location = new System.Drawing.Point(188, 192);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(378, 35);
+            this.textBoxPassword.Size = new System.Drawing.Size(343, 35);
             this.textBoxPassword.TabIndex = 3;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(48, 224);
+            this.label3.Location = new System.Drawing.Point(183, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(260, 29);
+            this.label3.Size = new System.Drawing.Size(209, 25);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Обязательные поля*";
+            this.label3.Text = "*Обязательные поля";
             // 
             // buttonSignIn
             // 
-            this.buttonSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSignIn.Location = new System.Drawing.Point(95, 346);
+            this.buttonSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSignIn.Location = new System.Drawing.Point(188, 391);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(189, 50);
             this.buttonSignIn.TabIndex = 8;
@@ -98,20 +99,32 @@
             // 
             // buttonRegistration
             // 
-            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRegistration.Location = new System.Drawing.Point(290, 347);
+            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRegistration.Location = new System.Drawing.Point(188, 447);
             this.buttonRegistration.Name = "buttonRegistration";
-            this.buttonRegistration.Size = new System.Drawing.Size(189, 49);
+            this.buttonRegistration.Size = new System.Drawing.Size(189, 50);
             this.buttonRegistration.TabIndex = 9;
             this.buttonRegistration.Text = "Регистрация";
             this.buttonRegistration.UseVisualStyleBackColor = true;
             this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonClear.Location = new System.Drawing.Point(188, 335);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(189, 50);
+            this.buttonClear.TabIndex = 10;
+            this.buttonClear.Text = "Очистить поля";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 544);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonRegistration);
             this.Controls.Add(this.buttonSignIn);
             this.Controls.Add(this.label3);
@@ -120,6 +133,7 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelName);
             this.Name = "Authorization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
@@ -136,5 +150,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonSignIn;
         private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

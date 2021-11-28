@@ -33,8 +33,12 @@ namespace Gasstation
                 {
                     MessageBox.Show("Авторизация прошла успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Form3 form3 = new Form3();
-                    form3.Show();
+                    Interface i = new Interface();
+                    i.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка входа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -50,6 +54,13 @@ namespace Gasstation
             this.Hide();
             Registration reg = new Registration();
             reg.Show();
+        }
+
+        // Кнопка дял очистки полей
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxName.Clear();
+            textBoxPassword.Clear();
         }
     }
 }

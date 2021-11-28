@@ -44,18 +44,26 @@ namespace Gasstation
             }
             else
             {
-                if (sf.RegUsers(textBoxNameReg.Text, textBoxPasswordReg.Text, textBoxEmailReg.Text))
+                if (sf.RegUsers(textBoxNameReg.Text, textBoxPasswordReg.Text, textBoxEmailReg.Text, textBoxTelReg.Text))
                 {
-                    MessageBox.Show("Регистрация прошла успешно!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Регистрация прошла успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Authorization at = new Authorization();
                     at.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Проверьте правильность написания Вашего имени или Пароля или зарегистрируйтесь!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Проверьте правильность написания Вашего имени или Пароля или зарегистрируйтесь", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        // Кнопка для очистки полей
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxNameReg.Clear();
+            textBoxPasswordReg.Clear();
+            textBoxEmailReg.Clear();
         }
     }
 }
