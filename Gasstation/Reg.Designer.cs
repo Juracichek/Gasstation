@@ -63,7 +63,7 @@
             // buttonClear
             // 
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClear.Location = new System.Drawing.Point(196, 365);
+            this.buttonClear.Location = new System.Drawing.Point(187, 346);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(189, 50);
             this.buttonClear.TabIndex = 26;
@@ -74,7 +74,7 @@
             // buttonSignIn
             // 
             this.buttonSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSignIn.Location = new System.Drawing.Point(196, 477);
+            this.buttonSignIn.Location = new System.Drawing.Point(187, 458);
             this.buttonSignIn.Name = "buttonSignIn";
             this.buttonSignIn.Size = new System.Drawing.Size(189, 50);
             this.buttonSignIn.TabIndex = 25;
@@ -85,7 +85,7 @@
             // buttonRegistration
             // 
             this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRegistration.Location = new System.Drawing.Point(196, 421);
+            this.buttonRegistration.Location = new System.Drawing.Point(187, 402);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(189, 50);
             this.buttonRegistration.TabIndex = 24;

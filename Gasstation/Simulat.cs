@@ -43,13 +43,13 @@ namespace Gasstation
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)
         {
             Working = true;
             Task.Run(() => Registration());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonStop_Click(object sender, EventArgs e)
         {
             Working = false;
         }
