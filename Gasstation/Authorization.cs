@@ -23,17 +23,17 @@ namespace Gasstation
         // Кнопка "Вход" - войти в систему
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "" || textBoxPassword.Text == "")
+            if (textBoxLogin.Text == "" || textBoxPassword.Text == "")
             {
                 MessageBox.Show("Пожалуйста, заполните все поля", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                if (sf.LogUsers(textBoxName.Text, textBoxPassword.Text))
+                if (sf.LogUsers(textBoxLogin.Text, textBoxPassword.Text))
                 {
                     MessageBox.Show("Авторизация прошла успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Simulation i = new Simulation();
+                    Interface i = new Interface();
                     i.Show();
                 }
                 else
@@ -59,7 +59,7 @@ namespace Gasstation
         // Кнопка дял очистки полей
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxName.Clear();
+            textBoxLogin.Clear();
             textBoxPassword.Clear();
         }
     }

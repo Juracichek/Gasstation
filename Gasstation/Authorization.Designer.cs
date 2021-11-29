@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelName = new System.Windows.Forms.Label();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSignIn = new System.Windows.Forms.Button();
@@ -38,15 +38,15 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // labelName
+            // labelLogin
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName.Location = new System.Drawing.Point(28, 137);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(145, 29);
-            this.labelName.TabIndex = 0;
-            this.labelName.Text = "Ваше имя*:";
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogin.Location = new System.Drawing.Point(74, 137);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(99, 29);
+            this.labelLogin.TabIndex = 0;
+            this.labelLogin.Text = "Логин*:";
             // 
             // labelPassword
             // 
@@ -58,13 +58,13 @@
             this.labelPassword.TabIndex = 1;
             this.labelPassword.Text = "Пароль*:";
             // 
-            // textBoxName
+            // textBoxLogin
             // 
-            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxName.Location = new System.Drawing.Point(188, 131);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(334, 35);
-            this.textBoxName.TabIndex = 2;
+            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLogin.Location = new System.Drawing.Point(188, 131);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(334, 35);
+            this.textBoxLogin.TabIndex = 2;
             // 
             // textBoxPassword
             // 
@@ -129,9 +129,9 @@
             this.Controls.Add(this.buttonSignIn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelLogin);
             this.Name = "Authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
@@ -143,9 +143,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonSignIn;

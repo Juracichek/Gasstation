@@ -38,13 +38,13 @@ namespace Gasstation
         // Кнопка "Регистрация" - чтобы зарегать пользователя
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
-            if (textBoxNameReg.Text == "" || textBoxPasswordReg.Text == "" || textBoxEmailReg.Text == "" || textBoxTelReg.Text == "")
+            if (textBoxLoginReg.Text == "" || textBoxPasswordReg.Text == "" || textBoxEmailReg.Text == "" || textBoxTelReg.Text == "")
             {
                 MessageBox.Show("Пожалуйста, заполните все поля", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                if (sf.RegUsers(textBoxNameReg.Text, textBoxPasswordReg.Text, textBoxEmailReg.Text, textBoxTelReg.Text))
+                if (sf.RegUsers(textBoxLoginReg.Text, textBoxPasswordReg.Text, textBoxEmailReg.Text, textBoxTelReg.Text))
                 {
                     MessageBox.Show("Регистрация прошла успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
@@ -61,7 +61,7 @@ namespace Gasstation
         // Кнопка для очистки полей
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxNameReg.Clear();
+            textBoxLoginReg.Clear();
             textBoxPasswordReg.Clear();
             textBoxEmailReg.Clear();
             textBoxTelReg.Clear();

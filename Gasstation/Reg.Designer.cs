@@ -36,10 +36,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxEmailReg = new System.Windows.Forms.TextBox();
             this.textBoxPasswordReg = new System.Windows.Forms.TextBox();
-            this.textBoxNameReg = new System.Windows.Forms.TextBox();
+            this.textBoxLoginReg = new System.Windows.Forms.TextBox();
             this.labelEmailReg = new System.Windows.Forms.Label();
             this.labelPasswordReg = new System.Windows.Forms.Label();
-            this.labelNameReg = new System.Windows.Forms.Label();
+            this.labelLoginReg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxTelReg
@@ -121,13 +121,13 @@
             this.textBoxPasswordReg.TabIndex = 22;
             this.textBoxPasswordReg.UseSystemPasswordChar = true;
             // 
-            // textBoxNameReg
+            // textBoxLoginReg
             // 
-            this.textBoxNameReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxNameReg.Location = new System.Drawing.Point(196, 97);
-            this.textBoxNameReg.Name = "textBoxNameReg";
-            this.textBoxNameReg.Size = new System.Drawing.Size(334, 35);
-            this.textBoxNameReg.TabIndex = 20;
+            this.textBoxLoginReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLoginReg.Location = new System.Drawing.Point(196, 97);
+            this.textBoxLoginReg.Name = "textBoxLoginReg";
+            this.textBoxLoginReg.Size = new System.Drawing.Size(334, 35);
+            this.textBoxLoginReg.TabIndex = 20;
             // 
             // labelEmailReg
             // 
@@ -149,15 +149,15 @@
             this.labelPasswordReg.TabIndex = 18;
             this.labelPasswordReg.Text = "Пароль*:";
             // 
-            // labelNameReg
+            // labelLoginReg
             // 
-            this.labelNameReg.AutoSize = true;
-            this.labelNameReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelNameReg.Location = new System.Drawing.Point(35, 103);
-            this.labelNameReg.Name = "labelNameReg";
-            this.labelNameReg.Size = new System.Drawing.Size(145, 29);
-            this.labelNameReg.TabIndex = 17;
-            this.labelNameReg.Text = "Ваше имя*:";
+            this.labelLoginReg.AutoSize = true;
+            this.labelLoginReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLoginReg.Location = new System.Drawing.Point(81, 103);
+            this.labelLoginReg.Name = "labelLoginReg";
+            this.labelLoginReg.Size = new System.Drawing.Size(99, 29);
+            this.labelLoginReg.TabIndex = 17;
+            this.labelLoginReg.Text = "Логин*:";
             // 
             // Reg
             // 
@@ -172,11 +172,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxEmailReg);
             this.Controls.Add(this.textBoxPasswordReg);
-            this.Controls.Add(this.textBoxNameReg);
+            this.Controls.Add(this.textBoxLoginReg);
             this.Controls.Add(this.labelEmailReg);
             this.Controls.Add(this.labelPasswordReg);
-            this.Controls.Add(this.labelNameReg);
+            this.Controls.Add(this.labelLoginReg);
             this.Name = "Reg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reg";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,9 +194,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxEmailReg;
         private System.Windows.Forms.TextBox textBoxPasswordReg;
-        private System.Windows.Forms.TextBox textBoxNameReg;
+        private System.Windows.Forms.TextBox textBoxLoginReg;
         private System.Windows.Forms.Label labelEmailReg;
         private System.Windows.Forms.Label labelPasswordReg;
-        private System.Windows.Forms.Label labelNameReg;
+        private System.Windows.Forms.Label labelLoginReg;
     }
 }
