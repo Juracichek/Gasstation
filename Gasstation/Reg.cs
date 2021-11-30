@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace Gasstation
 {
@@ -44,6 +36,27 @@ namespace Gasstation
             }
             else
             {
+                string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+                if (Regex.IsMatch(textBoxEmailReg.Text, pattern, RegexOptions.IgnoreCase))
+                {
+                    MessageBox.Show("Email подтверждён", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Некорректный email");
+                    return;
+                }
+
+                string pattern2 = "[0-9]{3}-[0-9]{2}-[0-9]{2}";
+                if (Regex.IsMatch(textBoxTelReg.Text, pattern2, RegexOptions.IgnoreCase))
+                {
+                    MessageBox.Show("Телефон введён верно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Неверно введён телефон");
+                    return;
+                }
                 if (sf.RegUsers(textBoxLoginReg.Text, textBoxPasswordReg.Text, textBoxEmailReg.Text, textBoxTelReg.Text))
                 {
                     MessageBox.Show("Регистрация прошла успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
