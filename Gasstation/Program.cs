@@ -16,7 +16,7 @@ namespace Gasstation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Reg());
+            Application.Run(new Interface());
         }
     }
 }
