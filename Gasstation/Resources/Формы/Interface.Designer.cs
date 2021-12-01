@@ -35,9 +35,13 @@
             this.buttonTuck = new System.Windows.Forms.Button();
             this.buttonDelivery = new System.Windows.Forms.Button();
             this.buttonHistory = new System.Windows.Forms.Button();
+            this.labelCompanyName = new System.Windows.Forms.Label();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -78,7 +82,7 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.labelTitle);
+            this.panelLogo.Controls.Add(this.labelCompanyName);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -145,28 +149,62 @@
             this.buttonHistory.UseVisualStyleBackColor = true;
             this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
+            // labelCompanyName
+            // 
+            this.labelCompanyName.AutoSize = true;
+            this.labelCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCompanyName.ForeColor = System.Drawing.Color.Transparent;
+            this.labelCompanyName.Location = new System.Drawing.Point(47, 31);
+            this.labelCompanyName.Name = "labelCompanyName";
+            this.labelCompanyName.Size = new System.Drawing.Size(120, 37);
+            this.labelCompanyName.TabIndex = 0;
+            this.labelCompanyName.Text = "MexOil";
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.Firebrick;
+            this.panelTitle.Controls.Add(this.labelTitle);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(220, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(858, 95);
+            this.panelTitle.TabIndex = 1;
+            // 
             // labelTitle
             // 
+            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTitle.ForeColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Location = new System.Drawing.Point(58, 34);
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTitle.ForeColor = System.Drawing.Color.White;
+            this.labelTitle.Location = new System.Drawing.Point(304, 31);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(95, 29);
+            this.labelTitle.Size = new System.Drawing.Size(252, 29);
             this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "MexOil";
+            this.labelTitle.Text = "Домашняя страница";
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(220, 95);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(858, 449);
+            this.panelDesktop.TabIndex = 2;
             // 
             // Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 544);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
             this.Name = "Interface";
             this.Text = "Interface";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -179,6 +217,9 @@
         private System.Windows.Forms.Button buttonHistory;
         private System.Windows.Forms.Button buttonDelivery;
         private System.Windows.Forms.Button buttonTuck;
+        private System.Windows.Forms.Label labelCompanyName;
+        private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Panel panelDesktop;
     }
 }

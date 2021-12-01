@@ -15,6 +15,7 @@ namespace Gasstation
         private Button currentButton;
         private Random random;
         private int tempIndex;
+        private Form activeForm;
 
         public Interface()
         {
@@ -46,6 +47,8 @@ namespace Gasstation
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    panelTitle.BackColor = color;
+                    panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                 }
             }
         }
@@ -63,9 +66,28 @@ namespace Gasstation
             }
         }
 
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(childForm);
+            this.panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            labelTitle.Text = childForm.Text;
+        }
+
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            //ActivateButton(sender);
+            //OpenChildForm(new Forms);
         }
 
         private void buttonTuck_Click(object sender, EventArgs e)
