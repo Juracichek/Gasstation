@@ -83,71 +83,70 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Формы\Authorization.cs">
+    <Compile Include="StartForm\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Authorization.Designer.cs">
+    <Compile Include="StartForm\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Формы\Для интерфейса\FormDelivery.cs">
+    <Compile Include="StartForm\Interface\FormDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Для интерфейса\FormDelivery.Designer.cs">
+    <Compile Include="StartForm\Interface\FormDelivery.Designer.cs">
       <DependentUpon>FormDelivery.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Формы\Для интерфейса\FormHistory.cs">
+    <Compile Include="StartForm\Interface\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Для интерфейса\FormHistory.Designer.cs">
+    <Compile Include="StartForm\Interface\FormHistory.Designer.cs">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Формы\Для интерфейса\FormProfile.cs">
+    <Compile Include="StartForm\Interface\FormProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Для интерфейса\FormProfile.Designer.cs">
+    <Compile Include="StartForm\Interface\FormProfile.Designer.cs">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Формы\Interface.cs">
+    <Compile Include="StartForm\Interface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Interface.Designer.cs">
+    <Compile Include="StartForm\Interface.Designer.cs">
       <DependentUpon>Interface.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Формы\Reg.cs">
+    <Compile Include="StartForm\Reg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Reg.Designer.cs">
+    <Compile Include="StartForm\Reg.Designer.cs">
       <DependentUpon>Reg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Формы\Simulation.cs">
+    <Compile Include="StartForm\Simulation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Simulation.Designer.cs">
+    <Compile Include="StartForm\Simulation.Designer.cs">
       <DependentUpon>Simulation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Файлы\Program.cs" />
+    <Compile Include="Resources\Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Формы\Для интерфейса\FormTuck.cs">
+    <Compile Include="StartForm\Interface\FormTuck.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Формы\Для интерфейса\FormTuck.Designer.cs">
+    <Compile Include="StartForm\Interface\FormTuck.Designer.cs">
       <DependentUpon>FormTuck.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Файлы\SqlFunction.cs" />
-    <Compile Include="Resources\Файлы\ThemeColor.cs" />
-    <EmbeddedResource Include="Resources\Формы\Authorization.resx">
+    <Compile Include="Resources\Scripts\SqlFunction.cs" />
+    <EmbeddedResource Include="StartForm\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Формы\Для интерфейса\FormProfile.resx">
+    <EmbeddedResource Include="StartForm\Interface\FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Формы\Interface.resx">
+    <EmbeddedResource Include="StartForm\Interface.resx">
       <DependentUpon>Interface.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Формы\Reg.resx">
+    <EmbeddedResource Include="StartForm\Reg.resx">
       <DependentUpon>Reg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Формы\Simulation.resx">
+    <EmbeddedResource Include="StartForm\Simulation.resx">
       <DependentUpon>Simulation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

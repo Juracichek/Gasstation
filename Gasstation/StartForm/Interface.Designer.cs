@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonHistory = new System.Windows.Forms.Button();
+            this.buttonDelivery = new System.Windows.Forms.Button();
+            this.buttonTuck = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.buttonTuck = new System.Windows.Forms.Button();
-            this.buttonDelivery = new System.Windows.Forms.Button();
-            this.buttonHistory = new System.Windows.Forms.Button();
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
@@ -58,6 +58,66 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 544);
             this.panelMenu.TabIndex = 0;
+            // 
+            // buttonHistory
+            // 
+            this.buttonHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHistory.FlatAppearance.BorderSize = 0;
+            this.buttonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHistory.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonHistory.Image = ((System.Drawing.Image)(resources.GetObject("buttonHistory.Image")));
+            this.buttonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHistory.Location = new System.Drawing.Point(0, 350);
+            this.buttonHistory.Name = "buttonHistory";
+            this.buttonHistory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonHistory.Size = new System.Drawing.Size(220, 85);
+            this.buttonHistory.TabIndex = 4;
+            this.buttonHistory.Text = " История";
+            this.buttonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHistory.UseVisualStyleBackColor = true;
+            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
+            // 
+            // buttonDelivery
+            // 
+            this.buttonDelivery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonDelivery.FlatAppearance.BorderSize = 0;
+            this.buttonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelivery.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonDelivery.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelivery.Image")));
+            this.buttonDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelivery.Location = new System.Drawing.Point(0, 265);
+            this.buttonDelivery.Name = "buttonDelivery";
+            this.buttonDelivery.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonDelivery.Size = new System.Drawing.Size(220, 85);
+            this.buttonDelivery.TabIndex = 3;
+            this.buttonDelivery.Text = " Завоз";
+            this.buttonDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDelivery.UseVisualStyleBackColor = true;
+            this.buttonDelivery.Click += new System.EventHandler(this.buttonDelivery_Click);
+            // 
+            // buttonTuck
+            // 
+            this.buttonTuck.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonTuck.FlatAppearance.BorderSize = 0;
+            this.buttonTuck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTuck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonTuck.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonTuck.Image = ((System.Drawing.Image)(resources.GetObject("buttonTuck.Image")));
+            this.buttonTuck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTuck.Location = new System.Drawing.Point(0, 180);
+            this.buttonTuck.Name = "buttonTuck";
+            this.buttonTuck.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonTuck.Size = new System.Drawing.Size(220, 85);
+            this.buttonTuck.TabIndex = 2;
+            this.buttonTuck.Text = " Заправка";
+            this.buttonTuck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTuck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTuck.UseVisualStyleBackColor = true;
+            this.buttonTuck.Click += new System.EventHandler(this.buttonTuck_Click);
             // 
             // buttonProfile
             // 
@@ -88,66 +148,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 95);
             this.panelLogo.TabIndex = 0;
-            // 
-            // buttonTuck
-            // 
-            this.buttonTuck.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonTuck.FlatAppearance.BorderSize = 0;
-            this.buttonTuck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTuck.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonTuck.Image = ((System.Drawing.Image)(resources.GetObject("buttonTuck.Image")));
-            this.buttonTuck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTuck.Location = new System.Drawing.Point(0, 180);
-            this.buttonTuck.Name = "buttonTuck";
-            this.buttonTuck.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonTuck.Size = new System.Drawing.Size(220, 85);
-            this.buttonTuck.TabIndex = 2;
-            this.buttonTuck.Text = " Заправка";
-            this.buttonTuck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTuck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTuck.UseVisualStyleBackColor = true;
-            this.buttonTuck.Click += new System.EventHandler(this.buttonTuck_Click);
-            // 
-            // buttonDelivery
-            // 
-            this.buttonDelivery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonDelivery.FlatAppearance.BorderSize = 0;
-            this.buttonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelivery.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonDelivery.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelivery.Image")));
-            this.buttonDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelivery.Location = new System.Drawing.Point(0, 265);
-            this.buttonDelivery.Name = "buttonDelivery";
-            this.buttonDelivery.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonDelivery.Size = new System.Drawing.Size(220, 85);
-            this.buttonDelivery.TabIndex = 3;
-            this.buttonDelivery.Text = " Завоз";
-            this.buttonDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDelivery.UseVisualStyleBackColor = true;
-            this.buttonDelivery.Click += new System.EventHandler(this.buttonDelivery_Click);
-            // 
-            // buttonHistory
-            // 
-            this.buttonHistory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHistory.FlatAppearance.BorderSize = 0;
-            this.buttonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonHistory.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonHistory.Image = ((System.Drawing.Image)(resources.GetObject("buttonHistory.Image")));
-            this.buttonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHistory.Location = new System.Drawing.Point(0, 350);
-            this.buttonHistory.Name = "buttonHistory";
-            this.buttonHistory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonHistory.Size = new System.Drawing.Size(220, 85);
-            this.buttonHistory.TabIndex = 4;
-            this.buttonHistory.Text = " История";
-            this.buttonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHistory.UseVisualStyleBackColor = true;
-            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
             // labelCompanyName
             // 
