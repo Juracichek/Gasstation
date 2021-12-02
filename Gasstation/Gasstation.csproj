@@ -89,6 +89,12 @@
     <Compile Include="StartForm\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartForm\Interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm\Interface.Designer.cs">
+      <DependentUpon>Interface.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm\Interface\FormDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +113,11 @@
     <Compile Include="StartForm\Interface\FormProfile.Designer.cs">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartForm\Interface.cs">
+    <Compile Include="StartForm\Interface\FormTuck.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm\Interface.Designer.cs">
-      <DependentUpon>Interface.cs</DependentUpon>
+    <Compile Include="StartForm\Interface\FormTuck.Designer.cs">
+      <DependentUpon>FormTuck.cs</DependentUpon>
     </Compile>
     <Compile Include="StartForm\Reg.cs">
       <SubType>Form</SubType>
@@ -127,21 +133,24 @@
     </Compile>
     <Compile Include="Resources\Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartForm\Interface\FormTuck.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StartForm\Interface\FormTuck.Designer.cs">
-      <DependentUpon>FormTuck.cs</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Scripts\SqlFunction.cs" />
     <EmbeddedResource Include="StartForm\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StartForm\Interface.resx">
+      <DependentUpon>Interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm\Interface\FormDelivery.resx">
+      <DependentUpon>FormDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm\Interface\FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartForm\Interface\FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm\Interface.resx">
-      <DependentUpon>Interface.cs</DependentUpon>
+    <EmbeddedResource Include="StartForm\Interface\FormTuck.resx">
+      <DependentUpon>FormTuck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm\Reg.resx">
       <DependentUpon>Reg.cs</DependentUpon>
@@ -180,6 +189,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

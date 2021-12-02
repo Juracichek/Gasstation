@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gasstation
+namespace Gasstation.StartForm.Interface
 {
     public partial class FormProfile : Form
     {
