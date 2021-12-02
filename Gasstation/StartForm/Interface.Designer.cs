@@ -78,6 +78,7 @@
             this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonHistory.UseVisualStyleBackColor = true;
             this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
+            this.buttonHistory.Leave += new System.EventHandler(this.buttonHistory_Leave);
             // 
             // buttonDelivery
             // 
@@ -98,6 +99,7 @@
             this.buttonDelivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDelivery.UseVisualStyleBackColor = true;
             this.buttonDelivery.Click += new System.EventHandler(this.buttonDelivery_Click);
+            this.buttonDelivery.Leave += new System.EventHandler(this.buttonDelivery_Leave);
             // 
             // buttonTuck
             // 
@@ -118,6 +120,7 @@
             this.buttonTuck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTuck.UseVisualStyleBackColor = true;
             this.buttonTuck.Click += new System.EventHandler(this.buttonTuck_Click);
+            this.buttonTuck.Leave += new System.EventHandler(this.buttonTuck_Leave);
             // 
             // buttonProfile
             // 
@@ -138,6 +141,7 @@
             this.buttonProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonProfile.UseVisualStyleBackColor = true;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
+            this.buttonProfile.Leave += new System.EventHandler(this.buttonProfile_Leave);
             // 
             // panelLogo
             // 

@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Gasstation.StartForm;
+using System;
 using System.Windows.Forms;
 
 namespace Gasstation
@@ -38,7 +31,16 @@ namespace Gasstation
                 }
                 else
                 {
-                    MessageBox.Show("Ошибка входа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (textBoxLogin.Text == "admin" && textBoxPassword.Text == "admin")
+                    {
+                        this.Hide();
+                        AdminForm af = new AdminForm();
+                        af.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ошибка входа", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

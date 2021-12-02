@@ -7,43 +7,14 @@ namespace Gasstation
 {
     public partial class Interface : Form
     {
-        private Button currentButton;
         private Form activeForm;
 
         public Interface()
         {
             InitializeComponent();
         }
-                
-        private void ActivateButton(object btnSender)
-        {
-            if (btnSender != null)
-            {
-                if(currentButton != (Button)btnSender)
-                {
-                    DisableButton();
-                    currentButton = (Button)btnSender;
-                    currentButton.BackColor = Color.Firebrick;
-                    currentButton.ForeColor = Color.White;
-                    currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                }
-            }
-        }
-
-        private void DisableButton()
-        {
-            foreach(Control previosBtn in panelMenu.Controls)
-            {
-                if(previosBtn.GetType() == typeof(Button))
-                {
-                    previosBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previosBtn.ForeColor = Color.Gainsboro;
-                    previosBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                }
-            }
-        }
-
-        private void OpenChildForm(Form childForm, object btnSender)
+           
+        private void OpenChildForm(Form childForm)
         {
             if(activeForm != null)
             {
@@ -62,26 +33,46 @@ namespace Gasstation
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            OpenChildForm(new FormProfile(), sender);
+            buttonProfile.BackColor = Color.Firebrick;
+            OpenChildForm(new FormProfile());
         }
 
         private void buttonTuck_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            OpenChildForm(new FormTuck(), sender);
+            buttonTuck.BackColor = Color.Firebrick;
+            OpenChildForm(new FormTuck());
         }
 
         private void buttonDelivery_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            OpenChildForm(new FormDelivery(), sender);
+            buttonDelivery.BackColor = Color.Firebrick;
+            OpenChildForm(new FormDelivery());
         }
 
         private void buttonHistory_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            OpenChildForm(new FormHistory(), sender);
+            buttonHistory.BackColor = Color.Firebrick;
+            OpenChildForm(new FormHistory());
+        }
+
+        private void buttonProfile_Leave(object sender, EventArgs e)
+        {
+            buttonProfile.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void buttonTuck_Leave(object sender, EventArgs e)
+        {
+            buttonTuck.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void buttonDelivery_Leave(object sender, EventArgs e)
+        {
+            buttonDelivery.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void buttonHistory_Leave(object sender, EventArgs e)
+        {
+            buttonHistory.BackColor = Color.FromArgb(51, 51, 76);
         }
     }
 }

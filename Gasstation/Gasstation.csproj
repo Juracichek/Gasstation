@@ -83,6 +83,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Scripts\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +103,30 @@
     </Compile>
     <Compile Include="StartForm\Interface.Designer.cs">
       <DependentUpon>Interface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminClients.Designer.cs">
+      <DependentUpon>FormAdminClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminHistory.Designer.cs">
+      <DependentUpon>FormAdminHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminInfo.Designer.cs">
+      <DependentUpon>FormAdminInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm\Interface\FormAdminOrder.Designer.cs">
+      <DependentUpon>FormAdminOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="StartForm\Interface\FormDelivery.cs">
       <SubType>Form</SubType>
@@ -134,11 +167,26 @@
     <Compile Include="Resources\Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Scripts\SqlFunction.cs" />
+    <EmbeddedResource Include="StartForm\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartForm\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm\Interface.resx">
       <DependentUpon>Interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm\Interface\FormAdminClients.resx">
+      <DependentUpon>FormAdminClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm\Interface\FormAdminHistory.resx">
+      <DependentUpon>FormAdminHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm\Interface\FormAdminInfo.resx">
+      <DependentUpon>FormAdminInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm\Interface\FormAdminOrder.resx">
+      <DependentUpon>FormAdminOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm\Interface\FormDelivery.resx">
       <DependentUpon>FormDelivery.cs</DependentUpon>
