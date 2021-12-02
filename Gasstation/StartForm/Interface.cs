@@ -43,18 +43,6 @@ namespace Gasstation
             OpenChildForm(new FormTuck());
         }
 
-        private void buttonDelivery_Click(object sender, EventArgs e)
-        {
-            buttonDelivery.BackColor = Color.Firebrick;
-            OpenChildForm(new FormDelivery());
-        }
-
-        private void buttonHistory_Click(object sender, EventArgs e)
-        {
-            buttonHistory.BackColor = Color.Firebrick;
-            OpenChildForm(new FormHistory());
-        }
-
         private void buttonProfile_Leave(object sender, EventArgs e)
         {
             buttonProfile.BackColor = Color.FromArgb(51, 51, 76);
@@ -65,12 +53,25 @@ namespace Gasstation
             buttonTuck.BackColor = Color.FromArgb(51, 51, 76);
         }
 
-        private void buttonDelivery_Leave(object sender, EventArgs e)
+
+        private void buttonCard_Click(object sender, EventArgs e)
         {
-            buttonDelivery.BackColor = Color.FromArgb(51, 51, 76);
+            buttonCard.BackColor = Color.Firebrick;
+            OpenChildForm(new FormCard());
         }
 
-        private void buttonHistory_Leave(object sender, EventArgs e)
+        private void buttonCard_Leave(object sender, EventArgs e)
+        {
+            buttonCard.BackColor = Color.Firebrick;
+        }
+
+        private void buttonHistory_Click(object sender, EventArgs e)
+        {
+            buttonHistory.BackColor = Color.Firebrick;
+            OpenChildForm(new FormHistory());
+        }
+
+        private void buttonHistory_Leave_1(object sender, EventArgs e)
         {
             buttonHistory.BackColor = Color.FromArgb(51, 51, 76);
         }

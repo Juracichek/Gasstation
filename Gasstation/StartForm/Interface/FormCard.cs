@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gasstation.StartForm.Interface
 {
-    public partial class FormDelivery : Form
+    public partial class FormCard : Form
     {
-        public FormDelivery()
+        public FormCard()
         {
             InitializeComponent();
         }
