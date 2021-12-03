@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Gasstation
@@ -104,11 +105,11 @@ namespace Gasstation
             return data;
         }
 
-        public bool CreateTransaction(string idUser, string fuelType, string countLiter, string numberStation, string numberColumns, string sumShop)
+        public bool CreateTransaction(string idUser, string fuelType, string countLiter, string numberStation, string numberColumns, string sumShop, string countBonus, string sale)
         {
             bool flag = false;
             var dataShopping = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            MySqlCommand cmd = new MySqlCommand($"INSERT INTO shopping (id_user, fuel_type, count_liter, number_stations, number_columns, date_shopping, sum_shop) VALUES (@id_user, @fuel_type, @count_liter, @number_stations, @number_columns, @date_shopping, @sum_shop)", conn);
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO shopping (id_user, fuel_type, count_liter, number_stations, number_columns, date_shopping, sum_shop, count_score_of_shop, sale) VALUES (@id_user, @fuel_type, @count_liter, @number_stations, @number_columns, @date_shopping, @sum_shop, @count_score_of_shop, @sale)", conn);
             cmd.Parameters.AddWithValue("@id_user", idUser);
             cmd.Parameters.AddWithValue("@fuel_type", fuelType);
             cmd.Parameters.AddWithValue("@count_liter", countLiter);
@@ -116,8 +117,14 @@ namespace Gasstation
             cmd.Parameters.AddWithValue("@number_columns", numberColumns);
             cmd.Parameters.AddWithValue("@date_shopping", dataShopping);
             cmd.Parameters.AddWithValue("@sum_shop", sumShop);
+            cmd.Parameters.AddWithValue("@count_score_of_shop", countBonus);
+            cmd.Parameters.AddWithValue("@sale", sale);
+            MySqlCommand command = new MySqlCommand($"UPDATE bonus SET count_bonus = count_bonus - @count_bonus WHERE id_user = @id_user AND view_card = @view_card", conn);
+            command.Parameters.AddWithValue("@id_user", idUser);
+            command.Parameters.AddWithValue("@count_bonus", countBonus);
+            command.Parameters.AddWithValue("@view_card", "бонусная карта");
             conn.Open();
-            if (cmd.ExecuteNonQuery() == 1)
+            if (cmd.ExecuteNonQuery() == 1 && command.ExecuteNonQuery() == 1)
             {
                 flag = true;
             }
@@ -136,6 +143,23 @@ namespace Gasstation
             data.Load(sqldr);
             conn.Close();
             return data;
+        }
+
+        public bool AddBonus(string id, string bonus)
+        {
+            bool flag = false;
+            MySqlCommand command = new MySqlCommand($"UPDATE bonus SET count_bonus = count_bonus + @count_bonus WHERE id_user = @id_user AND view_card = @view_card", conn);
+            MessageBox.Show(bonus);
+            command.Parameters.AddWithValue("@id_user", id);
+            command.Parameters.AddWithValue("@count_bonus", bonus);
+            command.Parameters.AddWithValue("@view_card", "бонусная карта");
+            conn.Open();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                flag = true;
+            }
+            conn.Close();
+            return flag;
         }
     }
 }

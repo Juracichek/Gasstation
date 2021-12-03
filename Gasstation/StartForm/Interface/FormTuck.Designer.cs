@@ -91,12 +91,11 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPrice.Location = new System.Drawing.Point(332, 59);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(92, 32);
+            this.labelPrice.Size = new System.Drawing.Size(0, 29);
             this.labelPrice.TabIndex = 5;
-            this.labelPrice.Text = "label1";
             // 
             // comboBoxCard
             // 
@@ -111,29 +110,28 @@
             // labelBonus
             // 
             this.labelBonus.AutoSize = true;
-            this.labelBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBonus.Location = new System.Drawing.Point(438, 200);
+            this.labelBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBonus.Location = new System.Drawing.Point(545, 205);
             this.labelBonus.Name = "labelBonus";
-            this.labelBonus.Size = new System.Drawing.Size(92, 32);
+            this.labelBonus.Size = new System.Drawing.Size(0, 29);
             this.labelBonus.TabIndex = 7;
-            this.labelBonus.Text = "label1";
             // 
             // labelPriceSale
             // 
             this.labelPriceSale.AutoSize = true;
-            this.labelPriceSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPriceSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPriceSale.Location = new System.Drawing.Point(332, 104);
             this.labelPriceSale.Name = "labelPriceSale";
-            this.labelPriceSale.Size = new System.Drawing.Size(92, 32);
+            this.labelPriceSale.Size = new System.Drawing.Size(0, 29);
             this.labelPriceSale.TabIndex = 8;
-            this.labelPriceSale.Text = "label1";
             // 
             // checkBoxWriteOffBonus
             // 
             this.checkBoxWriteOffBonus.AutoSize = true;
-            this.checkBoxWriteOffBonus.Location = new System.Drawing.Point(260, 208);
+            this.checkBoxWriteOffBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxWriteOffBonus.Location = new System.Drawing.Point(266, 204);
             this.checkBoxWriteOffBonus.Name = "checkBoxWriteOffBonus";
-            this.checkBoxWriteOffBonus.Size = new System.Drawing.Size(156, 24);
+            this.checkBoxWriteOffBonus.Size = new System.Drawing.Size(225, 33);
             this.checkBoxWriteOffBonus.TabIndex = 9;
             this.checkBoxWriteOffBonus.Text = "Списать бонусы";
             this.checkBoxWriteOffBonus.UseVisualStyleBackColor = true;

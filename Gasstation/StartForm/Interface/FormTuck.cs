@@ -92,6 +92,11 @@ namespace Gasstation.StartForm.Interface
         private void buttonOrder_Click(object sender, EventArgs e)
         {
             CreateTransaction();
+            if(!checkBoxWriteOffBonus.Checked)
+            {
+                string bonus = (Convert.ToDouble(labelPrice.Text) * 2 / 100).ToString();
+                sf.AddBonus(ac.Id, bonus);
+            }
         }
 
         private void textBoxLiter_TextChanged(object sender, EventArgs e)
@@ -134,12 +139,31 @@ namespace Gasstation.StartForm.Interface
 
         private void CreateTransaction()
         {
+            string sale = "0";
+            string bonus = "0";
             string fuelType = comboBoxFuel.SelectedItem.ToString();
             string countLiter = textBoxLiter.Text;
             string numberStation = comboBoxStations.SelectedItem.ToString();
             string sumShop = labelPrice.Text;
             string numberColumns = comboBoxColumns.SelectedItem.ToString();
-            sf.CreateTransaction(ac.Id, fuelType, countLiter, numberStation, numberColumns, sumShop);
+            if(comboBoxCard.SelectedItem.ToString() == "дисконтная карта")
+            {
+                sale = card.Sale[comboBoxCard.SelectedIndex];
+                sumShop = labelPriceSale.Text;
+            }
+                
+            else
+            {
+
+                if (checkBoxWriteOffBonus.Checked)
+                {
+                    bonus = card.Count_bonus[comboBoxCard.SelectedIndex];
+                    sumShop = labelPriceSale.Text;
+                }
+                    
+            }
+                
+            sf.CreateTransaction(ac.Id, fuelType, countLiter, numberStation, numberColumns, sumShop, bonus, sale);
 
         }
 
