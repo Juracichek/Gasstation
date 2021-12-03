@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonHistory = new System.Windows.Forms.Button();
+            this.buttonCard = new System.Windows.Forms.Button();
             this.buttonTuck = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -37,8 +39,6 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.buttonCard = new System.Windows.Forms.Button();
-            this.buttonHistory = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -58,6 +58,48 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 544);
             this.panelMenu.TabIndex = 0;
+            // 
+            // buttonHistory
+            // 
+            this.buttonHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHistory.FlatAppearance.BorderSize = 0;
+            this.buttonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHistory.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonHistory.Image = ((System.Drawing.Image)(resources.GetObject("buttonHistory.Image")));
+            this.buttonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHistory.Location = new System.Drawing.Point(0, 350);
+            this.buttonHistory.Name = "buttonHistory";
+            this.buttonHistory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonHistory.Size = new System.Drawing.Size(220, 85);
+            this.buttonHistory.TabIndex = 6;
+            this.buttonHistory.Text = " История";
+            this.buttonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHistory.UseVisualStyleBackColor = true;
+            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
+            this.buttonHistory.Leave += new System.EventHandler(this.buttonHistory_Leave);
+            // 
+            // buttonCard
+            // 
+            this.buttonCard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCard.FlatAppearance.BorderSize = 0;
+            this.buttonCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCard.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCard.Image = ((System.Drawing.Image)(resources.GetObject("buttonCard.Image")));
+            this.buttonCard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCard.Location = new System.Drawing.Point(0, 265);
+            this.buttonCard.Name = "buttonCard";
+            this.buttonCard.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonCard.Size = new System.Drawing.Size(220, 85);
+            this.buttonCard.TabIndex = 5;
+            this.buttonCard.Text = " Карта";
+            this.buttonCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCard.UseVisualStyleBackColor = true;
+            this.buttonCard.Click += new System.EventHandler(this.buttonCard_Click);
+            this.buttonCard.Leave += new System.EventHandler(this.buttonCard_Leave);
             // 
             // buttonTuck
             // 
@@ -151,48 +193,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(858, 449);
             this.panelDesktop.TabIndex = 2;
-            // 
-            // buttonCard
-            // 
-            this.buttonCard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCard.FlatAppearance.BorderSize = 0;
-            this.buttonCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCard.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonCard.Image = ((System.Drawing.Image)(resources.GetObject("buttonCard.Image")));
-            this.buttonCard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCard.Location = new System.Drawing.Point(0, 265);
-            this.buttonCard.Name = "buttonCard";
-            this.buttonCard.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonCard.Size = new System.Drawing.Size(220, 85);
-            this.buttonCard.TabIndex = 5;
-            this.buttonCard.Text = " Карта";
-            this.buttonCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCard.UseVisualStyleBackColor = true;
-            this.buttonCard.Click += new System.EventHandler(this.buttonCard_Click);
-            this.buttonCard.Leave += new System.EventHandler(this.buttonCard_Leave);
-            // 
-            // buttonHistory
-            // 
-            this.buttonHistory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonHistory.FlatAppearance.BorderSize = 0;
-            this.buttonHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonHistory.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonHistory.Image = ((System.Drawing.Image)(resources.GetObject("buttonHistory.Image")));
-            this.buttonHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHistory.Location = new System.Drawing.Point(0, 350);
-            this.buttonHistory.Name = "buttonHistory";
-            this.buttonHistory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonHistory.Size = new System.Drawing.Size(220, 85);
-            this.buttonHistory.TabIndex = 6;
-            this.buttonHistory.Text = " История";
-            this.buttonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHistory.UseVisualStyleBackColor = true;
-            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
-            this.buttonHistory.Leave += new System.EventHandler(this.buttonHistory_Leave_1);
             // 
             // Interface
             // 

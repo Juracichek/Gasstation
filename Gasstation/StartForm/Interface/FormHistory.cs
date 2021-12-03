@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Gasstation.Resources.Scripts;
 using System.Windows.Forms;
 
 namespace Gasstation.StartForm.Interface
 {
     public partial class FormHistory : Form
     {
+        Account ac = new Account();
         public FormHistory()
         {
             InitializeComponent();
+        }
+
+        public FormHistory(Account ac)
+        {
+            InitializeComponent();
+            this.ac = ac;
+            //MessageBox.Show(ac.Login);
         }
     }
 }

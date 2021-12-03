@@ -26,7 +26,7 @@ namespace Gasstation
                 {
                     MessageBox.Show("Авторизация прошла успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Interface i = new Interface();
+                    Interface i = new Interface(textBoxLogin.Text);
                     i.Show();
                 }
                 else

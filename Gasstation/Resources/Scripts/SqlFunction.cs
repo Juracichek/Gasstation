@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +17,10 @@ namespace Gasstation
 
 
         // Регистрация пользователя
-        public bool RegUsers(string login, string password, string email, string phone)
+        public bool RegUsers(string login, string password, string phone, string email)
         {
             bool flag = false;
-            MySqlCommand cmd = new MySqlCommand($"INSERT INTO users (login, password, email, phone) VALUES (@login, @password, @email, @phone)", conn);
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO users (login, password, phone, email) VALUES (@login, @password, @phone, @email)", conn);
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@email", email);
@@ -47,6 +49,93 @@ namespace Gasstation
             }
             conn.Close();
             return flag;
+        }
+
+        //  Получаем данные о клиенте, который авторизировался
+        public DataTable GetClient(string login)
+        {
+            DataTable data = new DataTable();
+            data.Clear();
+            string sql = String.Format("SELECT * FROM users WHERE login = @uLogin ");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.Add("@uLogin", MySqlDbType.VarChar).Value = login;
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+
+            conn.Close();
+            return data;
+        }
+
+        public DataTable GetStation()
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM stations");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+
+        public DataTable GetFuel(string numberStation)
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM condition_stations WHERE id_station = @id_station");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.Add("@id_station", MySqlDbType.VarChar).Value = numberStation;
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+
+        public DataTable GetPriceFuel()
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM fuel");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+
+        public bool CreateTransaction(string idUser, string fuelType, string countLiter, string numberStation, string numberColumns, string sumShop)
+        {
+            bool flag = false;
+            var dataShopping = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO shopping (id_user, fuel_type, count_liter, number_stations, number_columns, date_shopping, sum_shop) VALUES (@id_user, @fuel_type, @count_liter, @number_stations, @number_columns, @date_shopping, @sum_shop)", conn);
+            cmd.Parameters.AddWithValue("@id_user", idUser);
+            cmd.Parameters.AddWithValue("@fuel_type", fuelType);
+            cmd.Parameters.AddWithValue("@count_liter", countLiter);
+            cmd.Parameters.AddWithValue("@number_stations", numberStation);
+            cmd.Parameters.AddWithValue("@number_columns", numberColumns);
+            cmd.Parameters.AddWithValue("@date_shopping", dataShopping);
+            cmd.Parameters.AddWithValue("@sum_shop", sumShop);
+            conn.Open();
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                flag = true;
+            }
+            conn.Close();
+            return flag;
+        }
+
+        public DataTable GetCard(string idUser)
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM bonus WHERE id_user = @id_user");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.Add("@id_user", MySqlDbType.VarChar).Value = idUser;
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
         }
     }
 }

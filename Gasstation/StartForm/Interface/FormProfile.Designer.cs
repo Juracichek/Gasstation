@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNameDB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // labelNameDB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Профиль";
+            this.labelNameDB.AutoSize = true;
+            this.labelNameDB.Location = new System.Drawing.Point(252, 78);
+            this.labelNameDB.Name = "labelNameDB";
+            this.labelNameDB.Size = new System.Drawing.Size(51, 20);
+            this.labelNameDB.TabIndex = 0;
+            this.labelNameDB.Text = "lable1";
             // 
             // FormProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelNameDB);
             this.Name = "FormProfile";
-            this.Text = "FormProfile";
+            this.Text = "Профиль";
+            this.Load += new System.EventHandler(this.FormProfile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNameDB;
     }
 }
