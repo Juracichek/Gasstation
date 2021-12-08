@@ -123,26 +123,11 @@
   <metadata name="buttonHistory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="buttonCard.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonTuck.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonProfile.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="panelLogo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="buttonHistory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJQSURBVFhH7dZB
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJQSURBVFhH7dZB
         SBVBHMfxjcrKoIMQUhhkBAWBKZWnEDSTbtYt8BB1zmteupjhwYjoWFIZIYKnQiiVoEMYpYfwUHoqKrtU
         UGGQlqLf3+Ifpmln3be+k7wffMCd93+z476ZnYlKKSVHtqIN9/EW3zGPjxhDN+qxAUXNZlzCNyxl8BIN
         KEr2YRL+Td7hKR7iBfQ0/Jqb2ITcOYyvsA51k6vYCz+6URMewR3ECLag4FThM9yOdiNLTuAL7Lt9SI0m
@@ -162,7 +147,7 @@
   <data name="buttonCard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKPSURBVFhHvddJ
+        6AAAAOgBhtX2rwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKPSURBVFhHvddJ
         yE1hHMfx17BAmYoylkxJFqZShjLbyCwlL6/EBkmKWCoZokjSu3otUIaFbCSlWCEbFqZsLF7zVBYsiO/3
         3vPcznXPfZ17zzl+9anznDv8/+c5zznn3paM6Y9z+IonWIr/lgF4gCsYi/34iVYUHovfx3n0wCS8wwl8
         QqFN1Cu+HWYGvqOQJkLxC0gq3g2n8AK5z4QL7h4uoScm4DV2woTizzEMU/EBm5A5jRYPCU1sLI2aTLPF
@@ -183,7 +168,7 @@
   <data name="buttonTuck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qgAAAKoBBgpwTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKzSURBVFhHvddZ
+        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKzSURBVFhHvddZ
         qA5hHMfxscuSNRcIKbLlBmUrFCWlk6PsKbKUCykXlmxlLVzIUkqSIp0UygUKhcgVyZK9iAtbyHKO9Xx/
         M+fvPD3vnDOTnnl/9al33jPzzP+dZ57lRGQ2HuIQKtEeZc0N/HX8wjWswiAUnudwC/Dp6ezGBDRB8HTH
         cpxHNdKKMCfRDoWlDSZiD14irYg76IvCo8c9DBvwCG4R7zAeZUsL7IcV8AFD0Q9uWkGjqkt8VECW4CPG
@@ -229,13 +214,7 @@
   <metadata name="labelCompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="labelCompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="panelTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="labelTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="labelTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

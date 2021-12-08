@@ -203,6 +203,7 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
             this.Name = "Interface";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interface";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

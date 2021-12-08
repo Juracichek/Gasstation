@@ -38,12 +38,18 @@
             this.labelBonus = new System.Windows.Forms.Label();
             this.labelPriceSale = new System.Windows.Forms.Label();
             this.checkBoxWriteOffBonus = new System.Windows.Forms.CheckBox();
+            this.labelNumStation = new System.Windows.Forms.Label();
+            this.labelNumColumns = new System.Windows.Forms.Label();
+            this.labelTypeFuel = new System.Windows.Forms.Label();
+            this.labelLiter = new System.Windows.Forms.Label();
+            this.labelTypeCard = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBoxStations
             // 
+            this.comboBoxStations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxStations.FormattingEnabled = true;
-            this.comboBoxStations.Location = new System.Drawing.Point(24, 24);
+            this.comboBoxStations.Location = new System.Drawing.Point(17, 52);
             this.comboBoxStations.Name = "comboBoxStations";
             this.comboBoxStations.Size = new System.Drawing.Size(215, 28);
             this.comboBoxStations.TabIndex = 0;
@@ -51,8 +57,9 @@
             // 
             // comboBoxColumns
             // 
+            this.comboBoxColumns.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxColumns.FormattingEnabled = true;
-            this.comboBoxColumns.Location = new System.Drawing.Point(24, 68);
+            this.comboBoxColumns.Location = new System.Drawing.Point(17, 123);
             this.comboBoxColumns.Name = "comboBoxColumns";
             this.comboBoxColumns.Size = new System.Drawing.Size(215, 28);
             this.comboBoxColumns.TabIndex = 1;
@@ -61,8 +68,9 @@
             // 
             // comboBoxFuel
             // 
+            this.comboBoxFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxFuel.FormattingEnabled = true;
-            this.comboBoxFuel.Location = new System.Drawing.Point(24, 111);
+            this.comboBoxFuel.Location = new System.Drawing.Point(17, 201);
             this.comboBoxFuel.Name = "comboBoxFuel";
             this.comboBoxFuel.Size = new System.Drawing.Size(215, 28);
             this.comboBoxFuel.TabIndex = 2;
@@ -71,7 +79,8 @@
             // 
             // textBoxLiter
             // 
-            this.textBoxLiter.Location = new System.Drawing.Point(24, 157);
+            this.textBoxLiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLiter.Location = new System.Drawing.Point(17, 277);
             this.textBoxLiter.Name = "textBoxLiter";
             this.textBoxLiter.Size = new System.Drawing.Size(215, 26);
             this.textBoxLiter.TabIndex = 3;
@@ -80,9 +89,10 @@
             // 
             // buttonOrder
             // 
-            this.buttonOrder.Location = new System.Drawing.Point(51, 378);
+            this.buttonOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOrder.Location = new System.Drawing.Point(555, 385);
             this.buttonOrder.Name = "buttonOrder";
-            this.buttonOrder.Size = new System.Drawing.Size(108, 48);
+            this.buttonOrder.Size = new System.Drawing.Size(217, 53);
             this.buttonOrder.TabIndex = 4;
             this.buttonOrder.Text = "Купить";
             this.buttonOrder.UseVisualStyleBackColor = true;
@@ -91,16 +101,18 @@
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPrice.Location = new System.Drawing.Point(332, 59);
+            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPrice.Location = new System.Drawing.Point(559, 277);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(0, 29);
+            this.labelPrice.Size = new System.Drawing.Size(157, 32);
             this.labelPrice.TabIndex = 5;
+            this.labelPrice.Text = "Стоимость";
             // 
             // comboBoxCard
             // 
+            this.comboBoxCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxCard.FormattingEnabled = true;
-            this.comboBoxCard.Location = new System.Drawing.Point(24, 204);
+            this.comboBoxCard.Location = new System.Drawing.Point(17, 346);
             this.comboBoxCard.Name = "comboBoxCard";
             this.comboBoxCard.Size = new System.Drawing.Size(215, 28);
             this.comboBoxCard.TabIndex = 6;
@@ -110,39 +122,100 @@
             // labelBonus
             // 
             this.labelBonus.AutoSize = true;
-            this.labelBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBonus.Location = new System.Drawing.Point(545, 205);
+            this.labelBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBonus.Location = new System.Drawing.Point(224, 385);
             this.labelBonus.Name = "labelBonus";
-            this.labelBonus.Size = new System.Drawing.Size(0, 29);
+            this.labelBonus.Size = new System.Drawing.Size(109, 25);
             this.labelBonus.TabIndex = 7;
+            this.labelBonus.Text = "labelBonus";
             // 
             // labelPriceSale
             // 
             this.labelPriceSale.AutoSize = true;
-            this.labelPriceSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPriceSale.Location = new System.Drawing.Point(332, 104);
+            this.labelPriceSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPriceSale.Location = new System.Drawing.Point(559, 330);
             this.labelPriceSale.Name = "labelPriceSale";
-            this.labelPriceSale.Size = new System.Drawing.Size(0, 29);
+            this.labelPriceSale.Size = new System.Drawing.Size(150, 32);
             this.labelPriceSale.TabIndex = 8;
+            this.labelPriceSale.Text = "изм стоим";
             // 
             // checkBoxWriteOffBonus
             // 
             this.checkBoxWriteOffBonus.AutoSize = true;
-            this.checkBoxWriteOffBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxWriteOffBonus.Location = new System.Drawing.Point(266, 204);
+            this.checkBoxWriteOffBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxWriteOffBonus.Location = new System.Drawing.Point(23, 384);
             this.checkBoxWriteOffBonus.Name = "checkBoxWriteOffBonus";
-            this.checkBoxWriteOffBonus.Size = new System.Drawing.Size(225, 33);
+            this.checkBoxWriteOffBonus.Size = new System.Drawing.Size(186, 29);
             this.checkBoxWriteOffBonus.TabIndex = 9;
             this.checkBoxWriteOffBonus.Text = "Списать бонусы";
             this.checkBoxWriteOffBonus.UseVisualStyleBackColor = true;
             this.checkBoxWriteOffBonus.Visible = false;
             this.checkBoxWriteOffBonus.CheckedChanged += new System.EventHandler(this.checkBoxWriteOffBonus_CheckedChanged);
             // 
+            // labelNumStation
+            // 
+            this.labelNumStation.AutoSize = true;
+            this.labelNumStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNumStation.Location = new System.Drawing.Point(18, 24);
+            this.labelNumStation.Name = "labelNumStation";
+            this.labelNumStation.Size = new System.Drawing.Size(163, 25);
+            this.labelNumStation.TabIndex = 10;
+            this.labelNumStation.Text = "Номер станции:";
+            // 
+            // labelNumColumns
+            // 
+            this.labelNumColumns.AutoSize = true;
+            this.labelNumColumns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNumColumns.Location = new System.Drawing.Point(18, 94);
+            this.labelNumColumns.Name = "labelNumColumns";
+            this.labelNumColumns.Size = new System.Drawing.Size(162, 25);
+            this.labelNumColumns.TabIndex = 11;
+            this.labelNumColumns.Text = "Номер колонки:";
+            this.labelNumColumns.Visible = false;
+            // 
+            // labelTypeFuel
+            // 
+            this.labelTypeFuel.AutoSize = true;
+            this.labelTypeFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTypeFuel.Location = new System.Drawing.Point(18, 173);
+            this.labelTypeFuel.Name = "labelTypeFuel";
+            this.labelTypeFuel.Size = new System.Drawing.Size(135, 25);
+            this.labelTypeFuel.TabIndex = 12;
+            this.labelTypeFuel.Text = "Вид топлива:";
+            this.labelTypeFuel.Visible = false;
+            // 
+            // labelLiter
+            // 
+            this.labelLiter.AutoSize = true;
+            this.labelLiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLiter.Location = new System.Drawing.Point(18, 249);
+            this.labelLiter.Name = "labelLiter";
+            this.labelLiter.Size = new System.Drawing.Size(167, 25);
+            this.labelLiter.TabIndex = 13;
+            this.labelLiter.Text = "Сколько литров:";
+            this.labelLiter.Visible = false;
+            // 
+            // labelTypeCard
+            // 
+            this.labelTypeCard.AutoSize = true;
+            this.labelTypeCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTypeCard.Location = new System.Drawing.Point(18, 318);
+            this.labelTypeCard.Name = "labelTypeCard";
+            this.labelTypeCard.Size = new System.Drawing.Size(115, 25);
+            this.labelTypeCard.TabIndex = 14;
+            this.labelTypeCard.Text = "Вид карты:";
+            this.labelTypeCard.Visible = false;
+            // 
             // FormTuck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelTypeCard);
+            this.Controls.Add(this.labelLiter);
+            this.Controls.Add(this.labelTypeFuel);
+            this.Controls.Add(this.labelNumColumns);
+            this.Controls.Add(this.labelNumStation);
             this.Controls.Add(this.checkBoxWriteOffBonus);
             this.Controls.Add(this.labelPriceSale);
             this.Controls.Add(this.labelBonus);
@@ -173,5 +246,10 @@
         private System.Windows.Forms.Label labelBonus;
         private System.Windows.Forms.Label labelPriceSale;
         private System.Windows.Forms.CheckBox checkBoxWriteOffBonus;
+        private System.Windows.Forms.Label labelNumStation;
+        private System.Windows.Forms.Label labelNumColumns;
+        private System.Windows.Forms.Label labelTypeFuel;
+        private System.Windows.Forms.Label labelLiter;
+        private System.Windows.Forms.Label labelTypeCard;
     }
 }

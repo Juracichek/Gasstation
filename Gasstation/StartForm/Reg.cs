@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace Gasstation
 {
@@ -78,6 +79,36 @@ namespace Gasstation
             textBoxPasswordReg.Clear();
             textBoxEmailReg.Clear();
             textBoxTelReg.Clear();
+        }
+
+        private void buttonClear_MouseEnter(object sender, EventArgs e)
+        {
+            buttonClear.BackColor = Color.FromArgb(251, 206, 177);
+        }
+
+        private void buttonRegistration_MouseEnter(object sender, EventArgs e)
+        {
+            buttonRegistration.BackColor = Color.FromArgb(251, 206, 177);
+        }
+
+        private void buttonSignIn_MouseEnter(object sender, EventArgs e)
+        {
+            buttonSignIn.BackColor = Color.FromArgb(251, 206, 177);
+        }
+
+        private void buttonClear_MouseLeave(object sender, EventArgs e)
+        {
+            buttonClear.BackColor = Color.White;
+        }
+
+        private void buttonRegistration_MouseLeave(object sender, EventArgs e)
+        {
+            buttonRegistration.BackColor = Color.White;
+        }
+
+        private void buttonSignIn_MouseLeave(object sender, EventArgs e)
+        {
+            buttonSignIn.BackColor = Color.White;
         }
     }
 }

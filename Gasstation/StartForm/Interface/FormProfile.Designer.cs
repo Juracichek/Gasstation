@@ -34,11 +34,11 @@
             // labelNameDB
             // 
             this.labelNameDB.AutoSize = true;
-            this.labelNameDB.Location = new System.Drawing.Point(252, 78);
+            this.labelNameDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameDB.Location = new System.Drawing.Point(184, 103);
             this.labelNameDB.Name = "labelNameDB";
-            this.labelNameDB.Size = new System.Drawing.Size(51, 20);
+            this.labelNameDB.Size = new System.Drawing.Size(0, 29);
             this.labelNameDB.TabIndex = 0;
-            this.labelNameDB.Text = "lable1";
             // 
             // FormProfile
             // 

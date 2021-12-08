@@ -68,6 +68,7 @@ namespace Gasstation.StartForm.Interface
             {
                 comboBoxColumns.Items.Add(i);
             }
+            labelNumColumns.Visible = true;
             comboBoxColumns.Visible = true;
         }
 
@@ -79,6 +80,7 @@ namespace Gasstation.StartForm.Interface
             {
                 comboBoxFuel.Items.Add(dataFuel.Rows[i][1]);
             }
+            labelTypeFuel.Visible = true;
             comboBoxFuel.Visible = true;
         }
 
@@ -94,6 +96,7 @@ namespace Gasstation.StartForm.Interface
             CreateTransaction();
             if(!checkBoxWriteOffBonus.Checked)
             {
+                // за каждую покупку бенза скидка 2% от стоимости покупки
                 string bonus = (Convert.ToDouble(labelPrice.Text) * 2 / 100).ToString();
                 sf.AddBonus(ac.Id, bonus);
             }
@@ -103,6 +106,7 @@ namespace Gasstation.StartForm.Interface
         {
             SetPrice();      
             SetCard();
+            labelTypeCard.Visible = true;
             comboBoxCard.Visible = true;
         }
 
@@ -134,6 +138,7 @@ namespace Gasstation.StartForm.Interface
         private void comboBoxFuel_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetPrice();
+            labelLiter.Visible = true;
             textBoxLiter.Visible = true;
         }
 
