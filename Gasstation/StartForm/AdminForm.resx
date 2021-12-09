@@ -117,11 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="panelAdminMenu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonAdminSimulation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonAdminHistory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonAdminOrder.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonAdminClients.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonAdminInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelAdminLogo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="buttonAdminSimulation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonAdminSimulation.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMaSURBVFhH7ddp
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMaSURBVFhH7ddp
         iE1hHMfxQYQkipIlEaUoa6KklCWEspQkShJlX7Jkp/DCljf2kBe8wRte2ClrCNl3sjeWEnlh+37Pvc84
         c2buNHfm3rzxq09z7rnPPed/znPO8zxTkEg19MBGvMVtLEVr5DW9sROFOIcZaIm+2Ir3uIQ5aIicpgo+
         4hc2IXkCv++Dp/gG705O4wk8eSfsgMXsQU9Mxh3cxESswHJUJB0xDZ2jT7GEAkLqYxZ8Bg7DQkIWIZsC
@@ -138,10 +162,13 @@
         DxQU/gF6UiX1ZxdkOgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="buttonAdminHistory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="buttonAdminHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5wAAAOcB8BtYtQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJQSURBVFhH7dZB
+        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJQSURBVFhH7dZB
         SBVBHMfxjcrKoIMQUhhkBAWBKZWnEDSTbtYt8BB1zmteupjhwYjoWFIZIYKnQiiVoEMYpYfwUHoqKrtU
         UGGQlqLf3+Ifpmln3be+k7wffMCd93+z476ZnYlKKSVHtqIN9/EW3zGPjxhDN+qxAUXNZlzCNyxl8BIN
         KEr2YRL+Td7hKR7iBfQ0/Jqb2ITcOYyvsA51k6vYCz+6URMewR3ECLag4FThM9yOdiNLTuAL7Lt9SI0m
@@ -155,10 +182,13 @@
         QmCC
 </value>
   </data>
+  <metadata name="buttonAdminOrder.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="buttonAdminOrder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5wAAAOcB8BtYtQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKiSURBVFhH7ZfJ
+        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKiSURBVFhH7ZfJ
         605RGMdfZSZEdhYsLChkKhYi/4NSskGJjQyhTMVGbMiYeS6ZMqQUkbJWxjLb4A+w5/O93u/bcTrn/O77
         /q6db306957hOc/z3HO657QyGgBLYW+BJVBX82EzbIJ5qog1FtaAjV+E57ClwEs4Bx6zGkZDqFFwA97D
         UTgOH+EedPpq8k8gYzb+CHZASbvhAXiMnNZEoRM34QQMqd7+aChortvVG1oLZ2E87AJF8wzqOPAU1F99
@@ -173,10 +203,13 @@
         RHur9Rs6UVfEctTkZQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="buttonAdminClients.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="buttonAdminClients.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5wAAAOcB8BtYtQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKVSURBVFhH7ZfL
+        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKVSURBVFhH7ZfL
         q09RFMd/GBF5M0AxxIyRR8lIQvL6C5SSZ6Ekr5FHZjKRYoA/QN5lxoCJx8CrSPIeEAOP5PX5bHvdTr97
         7vmd49cdud/6dM9ae6+11zln73V+tzWgf9QyuAAvM+ezr981BE7B78zPTNiODYZ+035woVewCoZnVsNr
         cGwf9ItGwxf4CtN1tGkGOOacUTqaahgchgeZQzAUQt6xd3g6WeU6A85Zkay/6pQ3aRBcAYN/QLzXS+CY
@@ -191,10 +224,13 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="buttonAdminInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="buttonAdminInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5wAAAOcB8BtYtQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKpSURBVFhHvddJ
+        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKpSURBVFhHvddJ
         j05BFMbxFhJiDDbEUhAWxGcwizVhh4XpI5gtRLA2Ewsfw7A0bH0DU4KESBBTwvPrvKfT3Vqr+77Nk/yT
         W+feqlu3Tp1T5w510PywJ1wPT8Kb8K2Ha7ZrYXeYF6ZMq8LN8Dn8bORTuBFWhL41O1wM30MN7GvvhhNh
         b9jewzWbe+OfvxBmhU4y86ehBnoRDoSF4W/yzMHwMlT/R2FpaNL6wKc6+ppjwWp0lT5WpVbER6wLk8qX
@@ -209,4 +245,28 @@
         s7knvY5kuMk1NPQL8dr5U/vR2g8AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="panelAdminLogo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="labelAdminCompName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="labelAdminCompName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelAdminTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="labelAdminTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="labelAdminTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="panelAdminDesktop.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

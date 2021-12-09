@@ -238,5 +238,66 @@ namespace Gasstation
             conn.Close();
             return list;
         }
+
+        public string GetCountClients()
+        {
+            string count = "0";
+            MySqlCommand cmd = new MySqlCommand($"SELECT COUNT(id) FROM users", conn);
+            conn.Open();
+            count = cmd.ExecuteScalar().ToString();
+            conn.Close();
+            return count;
+        }
+
+        public string GetCountStation()
+        {
+            string count = "0";
+            MySqlCommand cmd = new MySqlCommand($"SELECT COUNT(number_stations) FROM stations", conn);
+            conn.Open();
+            count = cmd.ExecuteScalar().ToString();
+            conn.Close();
+            return count;
+        }
+
+        public string GetCountShop()
+        {
+            string count = "0";
+            MySqlCommand cmd = new MySqlCommand($"SELECT COUNT(id) FROM shopping", conn);
+            conn.Open();
+            count = cmd.ExecuteScalar().ToString();
+            conn.Close();
+            return count;
+        }
+
+        public ArrayList GetAdminFuelPrice()
+        {
+            ArrayList list = new ArrayList();
+            MySqlCommand cmd = new MySqlCommand($"SELECT type, price_per_liter FROM fuel", conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                foreach (DbDataRecord result in dr)
+                {
+                    list.Add(result);
+                }
+            }
+            conn.Close();
+            return list;
+        }
+
+        public DataTable GetShopPeriod(string dataStart, string dataEnd)
+        {
+            DataTable data = new DataTable();
+            data.Clear();
+            MySqlCommand cmd = new MySqlCommand($"SELECT COUNT(*), DATE(date_shopping) AS my_date FROM shopping WHERE (date_shopping BETWEEN @dataStart AND @dataEnd) GROUP BY my_date", conn);
+            cmd.Parameters.AddWithValue("@dataStart", dataStart);
+            cmd.Parameters.AddWithValue("@dataEnd", dataEnd);
+            conn.Open();
+            MySqlDataReader read = cmd.ExecuteReader();
+            data.Load(read);
+            conn.Close();
+            return data;
+        }
     }
 }

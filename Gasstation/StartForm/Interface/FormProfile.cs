@@ -24,7 +24,7 @@ namespace Gasstation.StartForm.Interface
         {
             InitializeComponent();
             this.ac = ac;
-            //essageBox.Show(ac.Login);
+            //MessageBox.Show(ac.Login);
         }
 
         private void FormProfile_Load(object sender, EventArgs e)

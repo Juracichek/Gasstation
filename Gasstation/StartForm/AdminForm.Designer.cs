@@ -58,7 +58,7 @@
             this.panelAdminMenu.ForeColor = System.Drawing.Color.Gainsboro;
             this.panelAdminMenu.Location = new System.Drawing.Point(0, 0);
             this.panelAdminMenu.Name = "panelAdminMenu";
-            this.panelAdminMenu.Size = new System.Drawing.Size(220, 544);
+            this.panelAdminMenu.Size = new System.Drawing.Size(220, 944);
             this.panelAdminMenu.TabIndex = 0;
             // 
             // buttonAdminSimulation
@@ -184,7 +184,7 @@
             this.panelAdminTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdminTitle.Location = new System.Drawing.Point(220, 0);
             this.panelAdminTitle.Name = "panelAdminTitle";
-            this.panelAdminTitle.Size = new System.Drawing.Size(858, 95);
+            this.panelAdminTitle.Size = new System.Drawing.Size(1358, 95);
             this.panelAdminTitle.TabIndex = 2;
             // 
             // labelAdminTitle
@@ -193,7 +193,7 @@
             this.labelAdminTitle.AutoSize = true;
             this.labelAdminTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAdminTitle.ForeColor = System.Drawing.Color.White;
-            this.labelAdminTitle.Location = new System.Drawing.Point(304, 31);
+            this.labelAdminTitle.Location = new System.Drawing.Point(554, 31);
             this.labelAdminTitle.Name = "labelAdminTitle";
             this.labelAdminTitle.Size = new System.Drawing.Size(183, 29);
             this.labelAdminTitle.TabIndex = 0;
@@ -204,14 +204,14 @@
             this.panelAdminDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAdminDesktop.Location = new System.Drawing.Point(220, 95);
             this.panelAdminDesktop.Name = "panelAdminDesktop";
-            this.panelAdminDesktop.Size = new System.Drawing.Size(858, 449);
+            this.panelAdminDesktop.Size = new System.Drawing.Size(1358, 849);
             this.panelAdminDesktop.TabIndex = 2;
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 544);
+            this.ClientSize = new System.Drawing.Size(1578, 944);
             this.Controls.Add(this.panelAdminDesktop);
             this.Controls.Add(this.panelAdminTitle);
             this.Controls.Add(this.panelAdminMenu);
