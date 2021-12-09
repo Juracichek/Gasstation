@@ -28,19 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgv_AdminHistory = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_AdminHistory)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgv_AdminHistory
+            // 
+            this.dgv_AdminHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_AdminHistory.Location = new System.Drawing.Point(13, 13);
+            this.dgv_AdminHistory.Name = "dgv_AdminHistory";
+            this.dgv_AdminHistory.RowHeadersWidth = 62;
+            this.dgv_AdminHistory.RowTemplate.Height = 28;
+            this.dgv_AdminHistory.Size = new System.Drawing.Size(775, 425);
+            this.dgv_AdminHistory.TabIndex = 0;
             // 
             // FormAdminHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgv_AdminHistory);
             this.Name = "FormAdminHistory";
-            this.Text = "FormAdminHistory";
+            this.Text = "История покупок";
+            this.Load += new System.EventHandler(this.FormAdminHistory_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_AdminHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgv_AdminHistory;
     }
 }

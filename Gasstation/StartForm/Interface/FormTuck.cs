@@ -20,6 +20,8 @@ namespace Gasstation.StartForm.Interface
         DataTable dataFuel = new DataTable();
         DataTable dataPriceFuel = new DataTable();
         Card card = new Card();
+
+        double writeBonus;
         public FormTuck()
         {
             InitializeComponent();
@@ -94,21 +96,32 @@ namespace Gasstation.StartForm.Interface
         private void buttonOrder_Click(object sender, EventArgs e)
         {
             CreateTransaction();
-            RestartForm();
+            
             if (!checkBoxWriteOffBonus.Checked)
             {
                 // за каждую покупку бенза скидка 2% от стоимости покупки
                 string bonus = (Convert.ToDouble(labelPrice.Text) * 2 / 100).ToString();
                 sf.AddBonus(ac.Id, bonus);
             }
+
+            
         }
 
         private void textBoxLiter_TextChanged(object sender, EventArgs e)
         {
-            SetPrice();      
-            SetCard();
-            labelTypeCard.Visible = true;
-            comboBoxCard.Visible = true;
+            if(textBoxLiter.Text == "")
+            {
+
+            }
+            else
+            {
+                SetPrice();
+                SetCard();
+                labelTypeCard.Visible = true;
+                comboBoxCard.Visible = true;
+            }
+            
+            
         }
 
 
@@ -161,19 +174,21 @@ namespace Gasstation.StartForm.Interface
             else
             {
 
-                if (checkBoxWriteOffBonus.Checked)
-                {
-                    bonus = card.Count_bonus[comboBoxCard.SelectedIndex];
-                    sumShop = labelPrice.Text;
-                    if (Convert.ToDouble(bonus) > Convert.ToDouble(sumShop))
-                    {
-                        bonus = sumShop;
-                    }
-                }
+                //if (checkBoxWriteOffBonus.Checked)
+                //{
+                //    bonus = card.Count_bonus[comboBoxCard.SelectedIndex];
+                //    sumShop = labelPrice.Text;
+                //    if (Convert.ToDouble(bonus) > Convert.ToDouble(sumShop))
+                //    {
+                //        bonus = sumShop;
+                //    }
+                //}
                     
             }
-                
-            sf.CreateTransaction(ac.Id, fuelType, countLiter, numberStation, numberColumns, sumShop, bonus, sale);
+            MessageBox.Show(writeBonus.ToString());
+            sf.CreateTransaction(ac.Id, fuelType, countLiter, numberStation, numberColumns, sumShop, writeBonus.ToString(), sale);
+
+            //RestartForm();
 
         }
 
@@ -206,11 +221,13 @@ namespace Gasstation.StartForm.Interface
             {
                 if (Convert.ToDouble(card.Count_bonus[comboBoxCard.SelectedIndex]) > Convert.ToDouble(labelPrice.Text))
                 {
+                    writeBonus = Convert.ToDouble(labelPrice.Text);
                     labelPriceSale.Text = "Списать " + labelPrice.Text + " бон.";
                     labelPrice.Text = "0";
                 }
                 else
                 {
+                    writeBonus = Convert.ToDouble(card.Count_bonus[comboBoxCard.SelectedIndex]);
                     labelPriceSale.Text = "Списать " + card.Count_bonus[comboBoxCard.SelectedIndex] + " бон.";
                     labelPrice.Text = (Convert.ToDouble(labelPrice.Text) - Convert.ToDouble(card.Count_bonus[comboBoxCard.SelectedIndex])).ToString();
                 }
@@ -219,11 +236,14 @@ namespace Gasstation.StartForm.Interface
 
         private void RestartForm()
         {
-            comboBoxStations.Items.Clear();
-            comboBoxColumns.Items.Clear();
-            comboBoxFuel.Items.Clear();
-            textBoxLiter.Clear();
-            comboBoxCard.Items.Clear();
+            comboBoxStations.ResetText();
+            comboBoxColumns.ResetText();
+            comboBoxFuel.ResetText();
+            textBoxLiter.Text = "";
+            comboBoxCard.ResetText();
+            labelPrice.Text = "";
+            labelPriceSale.Text = "";
+            labelBonus.Text = "";
         }
     }
 }

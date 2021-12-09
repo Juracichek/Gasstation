@@ -1,5 +1,7 @@
-﻿using Gasstation.StartForm.Interface;
+﻿using Gasstation.Resources.Scripts;
+using Gasstation.StartForm.Interface;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -73,6 +75,17 @@ namespace Gasstation.StartForm
         private void buttonAdminHistory_Leave(object sender, EventArgs e)
         {
             buttonAdminHistory.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void buttonAdminSimulation_Click(object sender, EventArgs e)
+        {
+            buttonAdminSimulation.BackColor = Color.Firebrick;
+            AdminOpenChildForm(new FormAdminSimulation());
+        }
+
+        private void buttonAdminSimulation_Leave(object sender, EventArgs e)
+        {
+            buttonAdminSimulation.BackColor = Color.FromArgb(51, 51, 76);
         }
     }
 }

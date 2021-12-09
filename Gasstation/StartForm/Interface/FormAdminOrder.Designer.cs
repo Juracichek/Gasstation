@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FormAdminOrder";
-            this.Text = "FormAdminOrder";
+            this.Text = "Заказ топлива";
             this.ResumeLayout(false);
 
         }

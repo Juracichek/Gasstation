@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace Gasstation
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@phone", phone);
             conn.Open();
-            if(cmd.ExecuteNonQuery() == 1)
+            if (cmd.ExecuteNonQuery() == 1)
             {
                 flag = true;
             }
@@ -160,6 +161,82 @@ namespace Gasstation
             }
             conn.Close();
             return flag;
+        }
+
+        public ArrayList GetHistory(string id)
+        {
+            ArrayList list = new ArrayList();
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM shopping WHERE id_user = @id_user", conn);
+            cmd.Parameters.AddWithValue("@id_user", id);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                foreach (DbDataRecord result in dr)
+                {
+                    list.Add(result);
+                }
+            }
+            conn.Close();
+            return list;
+        }
+
+        public bool CreateCard(string id, string typeCard)
+        {
+            bool flag = false;
+            string bonus = "0", sale = "0";
+            if(typeCard == "дисконтная карта")
+            {
+                sale = "2";
+            }    
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO bonus (id_user, view_card, sale, count_bonus) VALUES (@id_user, @view_card, @sale, @count_bonus)", conn);
+            cmd.Parameters.AddWithValue("@id_user", id);
+            cmd.Parameters.AddWithValue("@view_card", typeCard);
+            cmd.Parameters.AddWithValue("@sale", sale);
+            cmd.Parameters.AddWithValue("@count_bonus", bonus);
+            conn.Open();
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                flag = true;
+            }
+            conn.Close();
+            return flag;
+        }
+
+        public ArrayList GetAdminClient()
+        {
+            ArrayList list = new ArrayList();
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM users", conn);
+            //cmd.Parameters.AddWithValue("@id", id);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                foreach (DbDataRecord result in dr)
+                {
+                    list.Add(result);
+                }
+            }
+            conn.Close();
+            return list;
+        }
+
+        public ArrayList GetAdminHistory()
+        {
+            ArrayList list = new ArrayList();
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM shopping", conn);
+            //cmd.Parameters.AddWithValue("@id", id);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                foreach (DbDataRecord result in dr)
+                {
+                    list.Add(result);
+                }
+            }
+            conn.Close();
+            return list;
         }
     }
 }

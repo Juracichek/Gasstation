@@ -31,5 +31,10 @@ namespace Gasstation.StartForm.Interface
         {
             labelNameDB.Text = "Здравствуйте, " + ac.Login;
         }
+
+        private void labelNameDB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

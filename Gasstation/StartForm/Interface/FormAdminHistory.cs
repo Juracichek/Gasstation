@@ -12,9 +12,16 @@ namespace Gasstation.StartForm.Interface
 {
     public partial class FormAdminHistory : Form
     {
+        SqlFunction sf = new SqlFunction();
         public FormAdminHistory()
         {
             InitializeComponent();
+        }
+
+        private void FormAdminHistory_Load(object sender, EventArgs e)
+        {
+            dgv_AdminHistory.Rows.Clear();
+            dgv_AdminHistory.DataSource = sf.GetAdminHistory();
         }
     }
 }

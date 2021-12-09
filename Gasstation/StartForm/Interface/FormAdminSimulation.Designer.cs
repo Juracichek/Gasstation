@@ -1,6 +1,6 @@
-﻿namespace Gasstation.StartForm.Interface
+﻿namespace Gasstation.StartForm
 {
-    partial class FormHistory
+    partial class FormAdminSimulation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv_History = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_History)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv_History
-            // 
-            this.dgv_History.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_History.Location = new System.Drawing.Point(12, 12);
-            this.dgv_History.Name = "dgv_History";
-            this.dgv_History.RowHeadersWidth = 62;
-            this.dgv_History.RowTemplate.Height = 28;
-            this.dgv_History.Size = new System.Drawing.Size(776, 426);
-            this.dgv_History.TabIndex = 0;
-            // 
-            // FormHistory
+            // FormAdminSimulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgv_History);
-            this.Name = "FormHistory";
-            this.Text = "История заправок";
-            this.Load += new System.EventHandler(this.FormHistory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_History)).EndInit();
+            this.Name = "FormAdminSimulation";
+            this.Text = "Симуляция";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgv_History;
     }
 }
