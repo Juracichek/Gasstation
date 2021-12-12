@@ -338,5 +338,97 @@ namespace Gasstation
             conn.Close();
             return flag;
         }
+
+        public DataTable GetGeneratuser()
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM users");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+
+        public DataTable GetGeneratFuelType()
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM condition_stations");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+
+        public DataTable GetGeneratNumberStations()
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM stations");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+
+        public DataTable GetGeneratFuel()
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM fuel");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+        public DataTable GetGeneratCard(string idUser)
+        {
+            DataTable data = new DataTable();
+            string sql = String.Format("SELECT * FROM bonus WHERE id_user = @id_user");
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id_user", idUser);
+            conn.Open();
+            MySqlDataReader sqldr = cmd.ExecuteReader();
+            data.Load(sqldr);
+            conn.Close();
+            return data;
+        }
+
+        public bool Del(string id)
+        {
+            bool flag = false;
+            MySqlCommand cmd = new MySqlCommand($"DELETE FROM users WHERE id = @id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            conn.Open();
+            if(cmd.ExecuteNonQuery() == 1)
+            {
+                flag = true;
+            }
+            conn.Close();
+            return flag;
+        }
+
+        public bool Update(string id, string login, string password, string email, string phone)
+        {
+            bool flag = false;
+            MySqlCommand cmd = new MySqlCommand($"UPDATE users SET login = @login, password = @password, email = @email, phone = @phone WHERE id = @id", conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@login", login);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@phone", phone);
+            conn.Open();
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                flag = true;
+            }
+            conn.Close();
+            return flag;
+        }
     }
 }

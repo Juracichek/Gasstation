@@ -58,8 +58,7 @@ namespace Gasstation.StartForm.Interface
         {
             if(sf.OrderFuel(comboBoxAdminStations.SelectedItem.ToString(), comboBoxAdminFuel.SelectedItem.ToString(), textBoxAdminLiter.Text))
             {
-                //оформить
-                MessageBox.Show("Заказ оформлен");
+                MessageBox.Show("Заказ оформлен", "Ифнормация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }

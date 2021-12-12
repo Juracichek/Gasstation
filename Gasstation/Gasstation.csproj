@@ -102,12 +102,6 @@
     <Compile Include="StartForm\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartForm\Interface\FormAdminSimulation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StartForm\Interface\FormAdminSimulation.Designer.cs">
-      <DependentUpon>FormAdminSimulation.cs</DependentUpon>
-    </Compile>
     <Compile Include="StartForm\Interface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,10 +162,10 @@
     <Compile Include="StartForm\Reg.Designer.cs">
       <DependentUpon>Reg.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartForm\Simulation.cs">
+    <Compile Include="StartForm\Interface\Simulation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartForm\Simulation.Designer.cs">
+    <Compile Include="StartForm\Interface\Simulation.Designer.cs">
       <DependentUpon>Simulation.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources\Scripts\Program.cs" />
@@ -198,9 +192,6 @@
     <EmbeddedResource Include="StartForm\Interface\FormAdminOrder.resx">
       <DependentUpon>FormAdminOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm\Interface\FormAdminSimulation.resx">
-      <DependentUpon>FormAdminSimulation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StartForm\Interface\FormCard.resx">
       <DependentUpon>FormCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,7 +207,7 @@
     <EmbeddedResource Include="StartForm\Reg.resx">
       <DependentUpon>Reg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartForm\Simulation.resx">
+    <EmbeddedResource Include="StartForm\Interface\Simulation.resx">
       <DependentUpon>Simulation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

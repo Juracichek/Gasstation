@@ -80,7 +80,7 @@ namespace Gasstation.StartForm
         private void buttonAdminSimulation_Click(object sender, EventArgs e)
         {
             buttonAdminSimulation.BackColor = Color.Firebrick;
-            AdminOpenChildForm(new FormAdminSimulation());
+            AdminOpenChildForm(new Simulation());
         }
 
         private void buttonAdminSimulation_Leave(object sender, EventArgs e)
