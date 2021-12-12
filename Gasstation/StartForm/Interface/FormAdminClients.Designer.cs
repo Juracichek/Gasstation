@@ -34,19 +34,20 @@
             // 
             // dgv_AdminClient
             // 
+            this.dgv_AdminClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_AdminClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_AdminClient.Location = new System.Drawing.Point(13, 13);
             this.dgv_AdminClient.Name = "dgv_AdminClient";
             this.dgv_AdminClient.RowHeadersWidth = 62;
             this.dgv_AdminClient.RowTemplate.Height = 28;
-            this.dgv_AdminClient.Size = new System.Drawing.Size(775, 425);
+            this.dgv_AdminClient.Size = new System.Drawing.Size(953, 504);
             this.dgv_AdminClient.TabIndex = 0;
             // 
             // FormAdminClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1254, 695);
             this.Controls.Add(this.dgv_AdminClient);
             this.Name = "FormAdminClients";
             this.Text = "Список клиентов";

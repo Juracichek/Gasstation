@@ -58,7 +58,7 @@
             this.panelAdminMenu.ForeColor = System.Drawing.Color.Gainsboro;
             this.panelAdminMenu.Location = new System.Drawing.Point(0, 0);
             this.panelAdminMenu.Name = "panelAdminMenu";
-            this.panelAdminMenu.Size = new System.Drawing.Size(220, 944);
+            this.panelAdminMenu.Size = new System.Drawing.Size(220, 744);
             this.panelAdminMenu.TabIndex = 0;
             // 
             // buttonAdminSimulation
@@ -204,19 +204,22 @@
             this.panelAdminDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAdminDesktop.Location = new System.Drawing.Point(220, 95);
             this.panelAdminDesktop.Name = "panelAdminDesktop";
-            this.panelAdminDesktop.Size = new System.Drawing.Size(1358, 849);
+            this.panelAdminDesktop.Size = new System.Drawing.Size(1358, 649);
             this.panelAdminDesktop.TabIndex = 2;
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1578, 944);
+            this.ClientSize = new System.Drawing.Size(1578, 744);
             this.Controls.Add(this.panelAdminDesktop);
             this.Controls.Add(this.panelAdminTitle);
             this.Controls.Add(this.panelAdminMenu);
+            this.MinimumSize = new System.Drawing.Size(1600, 800);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelAdminMenu.ResumeLayout(false);
             this.panelAdminLogo.ResumeLayout(false);
             this.panelAdminLogo.PerformLayout();

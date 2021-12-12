@@ -75,12 +75,13 @@
             // 
             // dgv_FuelPrice
             // 
+            this.dgv_FuelPrice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_FuelPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_FuelPrice.Location = new System.Drawing.Point(17, 174);
             this.dgv_FuelPrice.Name = "dgv_FuelPrice";
             this.dgv_FuelPrice.RowHeadersWidth = 62;
             this.dgv_FuelPrice.RowTemplate.Height = 28;
-            this.dgv_FuelPrice.Size = new System.Drawing.Size(354, 224);
+            this.dgv_FuelPrice.Size = new System.Drawing.Size(397, 214);
             this.dgv_FuelPrice.TabIndex = 3;
             // 
             // labelCountClient
@@ -115,7 +116,7 @@
             // 
             // zedGraph
             // 
-            this.zedGraph.Location = new System.Drawing.Point(396, 21);
+            this.zedGraph.Location = new System.Drawing.Point(485, 21);
             this.zedGraph.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
@@ -125,7 +126,7 @@
             this.zedGraph.ScrollMinX = 0D;
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
-            this.zedGraph.Size = new System.Drawing.Size(799, 423);
+            this.zedGraph.Size = new System.Drawing.Size(953, 498);
             this.zedGraph.TabIndex = 7;
             this.zedGraph.UseExtendedPrintDialog = true;
             // 
@@ -133,7 +134,7 @@
             // 
             this.dtpEnd.CustomFormat = "yyyy-MM-dd";
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEnd.Location = new System.Drawing.Point(844, 470);
+            this.dtpEnd.Location = new System.Drawing.Point(997, 549);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(198, 26);
             this.dtpEnd.TabIndex = 8;
@@ -142,7 +143,7 @@
             // 
             this.dtpStart.CustomFormat = "yyyy-MM-dd";
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStart.Location = new System.Drawing.Point(591, 470);
+            this.dtpStart.Location = new System.Drawing.Point(744, 549);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(198, 26);
             this.dtpStart.TabIndex = 9;
@@ -150,7 +151,7 @@
             // buttonView
             // 
             this.buttonView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonView.Location = new System.Drawing.Point(694, 539);
+            this.buttonView.Location = new System.Drawing.Point(854, 616);
             this.buttonView.Name = "buttonView";
             this.buttonView.Size = new System.Drawing.Size(237, 47);
             this.buttonView.TabIndex = 10;
@@ -162,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 672);
+            this.ClientSize = new System.Drawing.Size(1478, 744);
             this.Controls.Add(this.buttonView);
             this.Controls.Add(this.dtpStart);
             this.Controls.Add(this.dtpEnd);

@@ -67,7 +67,7 @@ namespace Gasstation.StartForm.Interface
             pane.XAxis.Type = ZedGraph.AxisType.Text;
 
             pane.BarSettings.MinBarGap = 0.0f;
-            pane.BarSettings.MinClusterGap = 0.0f;
+            pane.BarSettings.MinClusterGap = 1.5f;
 
             zedGraph.AxisChange();
             zedGraph.Invalidate();

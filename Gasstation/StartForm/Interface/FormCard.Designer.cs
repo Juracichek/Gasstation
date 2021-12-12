@@ -40,41 +40,37 @@
             // 
             this.labelViewCard.AutoSize = true;
             this.labelViewCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelViewCard.Location = new System.Drawing.Point(206, 65);
+            this.labelViewCard.Location = new System.Drawing.Point(152, 65);
             this.labelViewCard.Name = "labelViewCard";
-            this.labelViewCard.Size = new System.Drawing.Size(92, 32);
+            this.labelViewCard.Size = new System.Drawing.Size(0, 32);
             this.labelViewCard.TabIndex = 0;
-            this.labelViewCard.Text = "label1";
             // 
             // labelViewCard1
             // 
             this.labelViewCard1.AutoSize = true;
             this.labelViewCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelViewCard1.Location = new System.Drawing.Point(206, 124);
+            this.labelViewCard1.Location = new System.Drawing.Point(152, 124);
             this.labelViewCard1.Name = "labelViewCard1";
-            this.labelViewCard1.Size = new System.Drawing.Size(92, 32);
+            this.labelViewCard1.Size = new System.Drawing.Size(0, 32);
             this.labelViewCard1.TabIndex = 1;
-            this.labelViewCard1.Text = "label1";
             // 
             // labelCountBon
             // 
             this.labelCountBon.AutoSize = true;
             this.labelCountBon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCountBon.Location = new System.Drawing.Point(440, 65);
+            this.labelCountBon.Location = new System.Drawing.Point(501, 65);
             this.labelCountBon.Name = "labelCountBon";
-            this.labelCountBon.Size = new System.Drawing.Size(92, 32);
+            this.labelCountBon.Size = new System.Drawing.Size(0, 32);
             this.labelCountBon.TabIndex = 2;
-            this.labelCountBon.Text = "label1";
             // 
             // labelCountSale
             // 
             this.labelCountSale.AutoSize = true;
             this.labelCountSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCountSale.Location = new System.Drawing.Point(440, 124);
+            this.labelCountSale.Location = new System.Drawing.Point(501, 124);
             this.labelCountSale.Name = "labelCountSale";
-            this.labelCountSale.Size = new System.Drawing.Size(92, 32);
+            this.labelCountSale.Size = new System.Drawing.Size(0, 32);
             this.labelCountSale.TabIndex = 3;
-            this.labelCountSale.Text = "label1";
             // 
             // buttonCheckoutCard
             // 

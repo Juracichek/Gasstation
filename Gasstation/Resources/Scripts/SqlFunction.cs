@@ -25,8 +25,8 @@ namespace Gasstation
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO users (login, password, phone, email) VALUES (@login, @password, @phone, @email)", conn);
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@password", password);
-            cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@phone", phone);
+            cmd.Parameters.AddWithValue("@email", email);
             conn.Open();
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -109,8 +109,11 @@ namespace Gasstation
         public bool CreateTransaction(string idUser, string fuelType, string countLiter, string numberStation, string numberColumns, string sumShop, string countBonus, string sale)
         {
             bool flag = false;
+            var rnd = new Random();
+            var id = rnd.Next(1000, 9999);
             var dataShopping = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            MySqlCommand cmd = new MySqlCommand($"INSERT INTO shopping (id_user, fuel_type, count_liter, number_stations, number_columns, date_shopping, sum_shop, count_score_of_shop, sale) VALUES (@id_user, @fuel_type, @count_liter, @number_stations, @number_columns, @date_shopping, @sum_shop, @count_score_of_shop, @sale)", conn);
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO shopping (id, id_user, fuel_type, count_liter, number_stations, number_columns, date_shopping, sum_shop, count_score_of_shop, sale) VALUES (@id, @id_user, @fuel_type, @count_liter, @number_stations, @number_columns, @date_shopping, @sum_shop, @count_score_of_shop, @sale)", conn);
+            cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@id_user", idUser);
             cmd.Parameters.AddWithValue("@fuel_type", fuelType);
             cmd.Parameters.AddWithValue("@count_liter", countLiter);
@@ -130,6 +133,7 @@ namespace Gasstation
                 flag = true;
             }
             conn.Close();
+            ChangeFuel(numberStation, fuelType, countLiter, id.ToString());
             return flag;
         }
 
@@ -298,6 +302,41 @@ namespace Gasstation
             data.Load(read);
             conn.Close();
             return data;
+        }
+
+        public void ChangeFuel(string idStation, string fuelType, string countLiter, string idShop)
+        {
+            MySqlCommand command = new MySqlCommand($"INSERT INTO change_fuel (take_liter, id_shopping) VALUES (@take_liter, @id_shopping)", conn);
+            command.Parameters.AddWithValue("@take_liter", countLiter);
+            command.Parameters.AddWithValue("@id_shopping", idShop);
+            MySqlCommand command1 = new MySqlCommand($"UPDATE condition_stations SET count_liter = count_liter - @count_liter WHERE id_station = @id_station AND fuel_type = @fuel_type", conn);
+            command1.Parameters.AddWithValue("@id_station", idStation);
+            command1.Parameters.AddWithValue("@fuel_type", fuelType);
+            command1.Parameters.AddWithValue("@count_liter", countLiter);
+            conn.Open();
+            command.ExecuteNonQuery();
+            command1.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public bool OrderFuel(string idStation, string fuelType, string countLiter)
+        {
+            bool flag = false;
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO fuel_order (number_stations, fuel_type, count_liter) VALUES (@number_stations, @fuel_type, @count_liter)", conn);
+            cmd.Parameters.AddWithValue("@number_stations", idStation);
+            cmd.Parameters.AddWithValue("@fuel_type", fuelType);
+            cmd.Parameters.AddWithValue("@count_liter", countLiter);
+            MySqlCommand cmd1 = new MySqlCommand($"UPDATE condition_stations SET count_liter = count_liter + @count_liter WHERE id_station = @id_station AND fuel_type = @fuel_type", conn);
+            cmd1.Parameters.AddWithValue("@id_station", idStation);
+            cmd1.Parameters.AddWithValue("@fuel_type", fuelType);
+            cmd1.Parameters.AddWithValue("@count_liter", countLiter);
+            conn.Open();
+            if(cmd.ExecuteNonQuery() == 1 && cmd1.ExecuteNonQuery() == 1)
+            {
+                flag = true;
+            }
+            conn.Close();
+            return flag;
         }
     }
 }
