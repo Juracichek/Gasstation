@@ -43,6 +43,7 @@
             this.labelFormatTel = new System.Windows.Forms.Label();
             this.panelTitleReg = new System.Windows.Forms.Panel();
             this.labelTitleReg = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelTitleReg.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,6 +199,7 @@
             // panelTitleReg
             // 
             this.panelTitleReg.BackColor = System.Drawing.Color.Firebrick;
+            this.panelTitleReg.Controls.Add(this.label2);
             this.panelTitleReg.Controls.Add(this.labelTitleReg);
             this.panelTitleReg.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleReg.Location = new System.Drawing.Point(0, 0);
@@ -216,6 +218,19 @@
             this.labelTitleReg.Size = new System.Drawing.Size(205, 37);
             this.labelTitleReg.TabIndex = 0;
             this.labelTitleReg.Text = "Регистрация";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(458, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Reg
             // 
@@ -237,6 +252,7 @@
             this.Controls.Add(this.labelEmailReg);
             this.Controls.Add(this.labelPasswordReg);
             this.Controls.Add(this.labelLoginReg);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reg";
@@ -264,5 +280,6 @@
         private System.Windows.Forms.Label labelFormatTel;
         private System.Windows.Forms.Panel panelTitleReg;
         private System.Windows.Forms.Label labelTitleReg;
+        private System.Windows.Forms.Label label2;
     }
 }

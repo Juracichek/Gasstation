@@ -38,6 +38,7 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.panelTitleAuthoriz = new System.Windows.Forms.Panel();
             this.labelTitleAuthoriz = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleAuthoriz.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,6 +145,7 @@
             // panelTitleAuthoriz
             // 
             this.panelTitleAuthoriz.BackColor = System.Drawing.Color.Firebrick;
+            this.panelTitleAuthoriz.Controls.Add(this.label1);
             this.panelTitleAuthoriz.Controls.Add(this.labelTitleAuthoriz);
             this.panelTitleAuthoriz.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleAuthoriz.Location = new System.Drawing.Point(0, 0);
@@ -162,6 +164,19 @@
             this.labelTitleAuthoriz.TabIndex = 0;
             this.labelTitleAuthoriz.Text = "Авторизация";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(408, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "X";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -176,6 +191,7 @@
             this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
@@ -199,5 +215,6 @@
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Panel panelTitleAuthoriz;
         private System.Windows.Forms.Label labelTitleAuthoriz;
+        private System.Windows.Forms.Label label1;
     }
 }
